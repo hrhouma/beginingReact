@@ -11,7 +11,7 @@
 
 - ✅ **Consolider les connaissances** dans la pratique 1.
 
-- 🔥 **Faire les exercices 5 et 6** !
+- 🔥 **Faire les exercices 5 et 6** (À VENIR)!
 
 
 # Introduction à React Router
