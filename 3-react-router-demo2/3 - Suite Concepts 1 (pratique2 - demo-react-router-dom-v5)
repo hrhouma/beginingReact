@@ -1,0 +1,753 @@
+ 
+#REACT EST une librairie Facebook
+#Librairie React router : https://v5.reactrouter.com/web/guides/quick-start
+#Il s'agit d'une librairie qui n'est pas officielle par Facebook
+#Elle comporte deux versions : version web et version mobile (react native)
+# La librairie incluait avant 2019 3 packages :
+####react-router
+####react-router-dom
+####react-router-native 
+
+# Aujourd'hui en 2022, la librairie inclut seulement 2 packages :
+####react-router-dom pour le web
+####react-router-native pour le mobile 
+
+
+*************************************************************************************
+*************Étape 1 : Création d'un nouveau projet *********************************
+*************************************************************************************
+> npx create-react-app routing1
+> npm install --save semantic-ui-react semantic-ui-css 
+> npm install --save react-router-dom 
+
+*************************************************************************************
+*************Fin Étape 1 : Création d'un nouveau projet *****************************
+*************************************************************************************
+
+
+*************************************************************************************
+*************Étape 2 : Nettoyer et préparer le projet *********************************
+*************************************************************************************
+
+# Il ne faut pas oublier d'ajouter le CDN svp (ligne 28 page index.html)
+Dans public/index.html (avant la fermeture de la balise </head>,
+(ligne 28 dans index.html) ajoutez cette ligne :
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css"></link>
+ 
+ #	Allez dans index.js 
+ # 	Supprimez tous le code que vous avez dans index.js et le remplacer par le suivant:
+ 
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+
+ReactDOM.render(<App />,document.getElementById('root')
+);
+
+
+*************************************************************************************
+*************FIN DE L'Étape 2 : Nettoyer et préparer le projet *********************************
+*************************************************************************************
+
+
+*************************************************************************************
+*************Étape 3 : Une première route *********************************
+*************************************************************************************
+
+### Allez explorer la librairie via son site officiel : https://v5.reactrouter.com/web/guides/quick-start
+### Par exemple :
+<BrowseRouter> : Conteneur pour les autres routes
+<HashRouter> : Naviguer dans la même page.
+<Link> : il remplace le <a href = ...> qui permet de naviguer vers une page externe. 
+<StaticRouter> : Il a comme rôle de simuler un routeur côté serveur.
+
+L'instructeur vous fornira un premier projet lab-react-router.zip que vous utiliserez
+1 - Dans un premier temps , dézippez le fichier
+2 - Exécutez npm install 
+3 - Exécutez la commande suivante pour fixer les vulnérabilités dans les packages
+> npm audit fix --force
+4- npm start
+5- Ouvrir votre projet dans vscode 
+5- Explorez votre projet !
+
+
+Voici votre code dans App.js
+
+import { BrowserRouter, Route, Switch} from 'react-router-dom';
+import './App.css';
+
+const Accueil = () => { return (<div>Je suis Accueil</div>) };
+const Faq = (props) => {
+    //console.log(props);
+    return (
+        <div>
+            Je suis la foire aux questions
+        
+        </div>)
+
+
+};
+const Cgv = (props) => {
+    return (
+        <div>
+            Je suis les conditions générales de ventes
+        </div>)
+};
+const Page404 = () => {
+   return( <div> Page 404</div>)
+};
+
+
+function App() {
+    return (
+        
+            <BrowserRouter>
+                <Switch>
+localhost:3000/
+                    <Route path="/" component={Accueil} exact={true} />
+                    <Route path="/faq" component={Faq} />
+                    <Route path="/cgv" component={Cgv} />
+                    <Route path="*" component={Page404} />
+
+                </Switch>
+            </BrowserRouter>
+       
+    );
+}
+export default App;
+
+
+Voici votre code dans package.json
+
+{
+  "name": "lab3-react-router",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^5.3.0",
+    "react-scripts": "^5.0.1",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^2.0.3",
+    "web-vitals": "^1.1.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
+
+
+
+
+*************************************************************************************
+*************FIN DE l'Étape 3 : Une première route *********************************
+*************************************************************************************
+
+
+*************************************************************************************
+*************Étape 4 : D'autres routes *********************************
+*************************************************************************************
+
+Voici les composants que nous avons ajoutés: Accueil, Faq, Cgv et Page404
+
+const Accueil = () => { return (<div>Je suis Accueil</div>) };
+const Faq = (props) => {
+    //console.log(props);
+    return (
+        <div>
+            Je suis la foire aux questions
+        
+        </div>)
+
+
+};
+const Cgv = (props) => {
+    return (
+        <div>
+            Je suis les conditions générales de ventes
+        </div>)
+};
+const Page404 = () => {
+   return( <div> Page 404</div>)
+};
+
+
+Dans App() nous avons dirigé notre application à ces composants en fonction de la route définie dans 
+le paramètre path 
+
+function App() {
+    return (
+        
+            <BrowserRouter>
+                <Switch>
+localhost:3000/
+                    <Route path="/" component={Accueil} exact={true} />
+                    <Route path="/faq" component={Faq} />
+                    <Route path="/cgv" component={Cgv} />
+                    <Route path="*" component={Page404} />
+
+                </Switch>
+            </BrowserRouter>
+       
+    );
+}
+export default App;
+
+
+*************************************************************************************
+*************Fin d'étape 4 : D'autres routes *********************************
+*************************************************************************************
+
+
+*************************************************************************************
+*************Étape 5 : Ajouter des liens  *********************************
+*************************************************************************************
+Dans la vraie vie, l'utilisateur n'éctrira rien dans l'URL, il va plutôt cliquer sur
+un bouton ou sur un lien qui esst supposé le rediriger vers la route 
+Nous allons ajouter des liens dans un premier temps 
+
+Refactorisez votre fonction App pour qu'elle soit comme suit :
+
+
+function App() {
+    return (
+        
+            <BrowserRouter>
+                <header>
+                        <h2>Menu </h2>
+                        <ul> 
+                            <li> <a href='/'> Accueil </a></li>
+                            <li> <a href='/faq'> F.A.Q </a></li>
+                        </ul>
+                </header>
+                    <Route path="/" component={Accueil} exact={true} />
+                    <Route path="/faq" component={Faq} />
+                    <Route path="/cgv" component={Cgv} />
+                    <Route path="*" component={Page404} />
+            </BrowserRouter>
+       
+    );
+}
+export default App;
+
+
+
+Remarquez que toute la page est recahrgée !!!!! ==> PROBLÈME !!!!
+Nous n'utilisons pas vraiement le potentiel de react-router !!
+
+SOLUTION :
+
+Remplacer le code suivant 
+<li> 
+		<a href='/'> Accueil </Link>
+	</li>
+	<li> 
+		<a href='/faq'> F.A.Q </Link>
+	</li>
+
+par :
+	<li> 
+		<Link to='/'> Accueil </Link>
+	</li>
+	<li> 
+		<Link to='/faq'> F.A.Q </Link>
+	</li>
+
+TESTEZ SVP !!!
+
+Explication  : Le DOM réel est utilisé avec <a href = ...>par le navigateur pour
+afficher toute la page web. 
+React simule deux DOMs virtuels : 
+ -DOM passé (avant de cliquer sur le lien ou bouton)
+ -DOM futur (au moment ou vous cliquez).
+En utilisant un composant React comme <Link>, React fait la différence entre ces deux
+DOMS et renvoie au DOM réel cette différence. 
+Notez que le DOM réel est plus long et coûteux en ressources. Ce que React fait, il 
+change uniquement ce qui est nécessaire !
+
+*************************************************************************************
+*************Fin de l'Étape 5 : Ajouter des liens *********************************
+*************************************************************************************
+
+
+
+*************************************************************************************
+*************Étape 6 : Ajouter du style <NavLink> à la place de <Link> *********************************
+*************************************************************************************
+Ajouter un commentaire c'est comme dans javascript 
+// commentaire sur une seule ligne
+/* commentaire 
+sur 
+plusieurs 
+lignes 
+*/
+
+Quand vous travaillez dans un rendu // ceci n'est pas un commenatire /* celui-ci aussi
+{/* Ceci est un commentaire dans render(){} */}
+
+
+<NavLink> à la place de <Link>
+Donc dans un premier temps ! Remplacez le code par le suivant :
+
+ <ul> 
+	 <li> <NavLink to='/'> Accueil </NavLink></li>
+	 <li> <NavLink to='/faq'> F.A.Q </NavLink></li>
+	 <li> <NavLink to='/cgv'> Conditions de vente </NavLink></li>
+ </ul>
+ 
+ dans un deuxième temps, voici le code complet du header:
+  
+                 <header>
+                        <h2>Menu </h2>
+                        <ul> 
+                            <li> <NavLink to='/' activeClassName="lien-actif" activeStyle={{color:"red", fontWeight:"bold"}} > Accueil </NavLink></li>
+                            <li> <NavLink to='/faq' activeClassName="lien-actif" activeStyle={{color:"red", fontWeight:"bold"}}> F.A.Q </NavLink></li>
+                            <li> <NavLink to='/cgv' activeClassName="lien-actif" activeStyle={{color:"red", fontWeight:"bold"}}> Conditions de vente </NavLink></li>
+                        </ul>
+                </header>
+
+
+
+Nous avons des dysfonctionnements dans le site !
+De 1 , le composant 404 est toujours la ! Nous allons voir tantôt comment résoudre le problème.
+De 2 , les liens sont actifs (Accueil et F.A.Q) (les deux en même temps)
+Pour résoudre le pb #2, nous allons utiliser le terme exact 
+
+<li> <NavLink to='/' activeClassName="lien-actif" activeStyle={{color:"red", fontWeight:"bold"}} exact={true}> Accueil </NavLink></li>
+
+
+
+*************************************************************************************
+*************FIN de l'étape 6 : Ajouter du style <NavLink> à la place de <Link> *********************************
+*************************************************************************************
+
+
+*************************************************************************************
+*************Étape 7 : LE 404 est partout !!!!! *********************************
+*************************************************************************************
+LE 404 est toujours la !! Pourquoi ? 
+Parceque le * est valide pour toutes les routes ( / , /faq, /cgv, etc...)
+même si nous ajoutons le mot clé exact, ça ne fonctionne pas !
+SOlution :
+
+Utilisez le <Switch> qui affiche une seule des routes SELON l'ordre défini 
+par le développeur (Partir de haut vers en bas et dès qu'il rencontre une route
+qui correspond au chemin indiqué, il va arrêter et sortir (principe du Switch) 
+				<Switch>
+                    <Route path="/" component={Accueil} exact={true} />
+                    <Route path="/faq" component={Faq} />
+                    <Route path="/cgv" component={Cgv} />
+                    <Route path="*" component={Page404} />
+                </Switch> 
+
+*************************************************************************************
+*************Fin de l'étape 7 : LE 404 est partout !!!!! *********************************
+*************************************************************************************
+
+Évaluation formative : est-ce que je peux enlever le exact={true} puisque j'ai ajouté
+le composant <Switch>
+
+
+*************************************************************************************
+*************Étape 8 : Un nouveau composant Redirect  *********************************
+*************************************************************************************
+
+Pour une bonne UX, nous ne devons pas afficher la page 404, mais plutôt rediriger 
+l'utilisateur vers la page d'accueil !
+
+
+const Page404 = () => {
+    return (
+        //<div> Page 404</div>
+        <Redirect to='/' />
+    )
+};
+
+Remarque : <Redirect to='/' /> le '/' va être détecté par :
+ <Route path="/" component={Accueil} exact={true} />
+ Et donc nous appelons le composant Accueil pour n'importe quel autre route
+ 
+ Exemple : 
+ 1- Si on saisit : localhost:3000/nimportequoi
+ 2- Ce qui va détecter cette route, c'est le <Route path="*" component={Page404} />
+ 3- Il va aller au composant Page404, qui est le suivant :
+		const Page404 = () => {
+			return (
+				//<div> Page 404</div>
+				<Redirect to='/' />
+			)
+		};
+4- Ce qui va détecter cette route (<Redirect to='/' />), c'est le : <Route path="/" component={Accueil} exact={true} />
+
+*************************************************************************************
+*************Fin étape 8 : Un nouveau composant Redirect  *********************************
+*************************************************************************************
+
+Évaluation formative 2 : C'est quoi la différence entre <Redirect > et <Link >, est-ce que je peux utiliser
+<Link > à la place d'utiliser <Redirect> ???
+
+
+
+
+*************************************************************************************
+*************Étape 9 : LES HOOKS avec les composants fonctionnels sans état  *********************************
+*************************************************************************************
+Si vous vous rappelez bien, nous avons défini des états dans les classes uniquement 
+Nous n'avons pas défini des états dans des fonctions.
+Les développeurs js étaient pas comfortable d'être obligés d'utiliser le POO 
+pour définir des composants avec état (utilisation forcée des classes).
+Tous ça c'est du passé avant 2019 !!!! Après 2019, nous avons la possibilité 
+d'utiliser les Hooks qui nous permettent d'ajouter des états dans des fonctions 
+et POUR LA PREMIÈRE FOIS !!!!!!
+
+Nous allons commencer avec un premier HOOK : 
+useState : Il permet d'ajouter des fonctionnalités de plus dans les composants 
+fonctionnels (Nous ne sommes plus obligés de passer par des composants de type 
+classe !)
+
+Définissons notre premier HOOK
+
+const [connected, setConnected]= useState(false);
+C'est équivalent à 
+state= {'connected': false}  et this.setState({'connected': xxx}) 
+
+const [objet, setObjet]= useState(0);
+const [classe, setClasse]= useState([]);
+const [groupe, setGroupe]= useState([]);
+const [etudiant, setEtudiant]= useState("");
+const [professeur, setProfesseur]= useState("");
+
+
+Modifiez votre composant Page404 telque suit :
+
+const Page404 = () => {
+
+    const [connected, setConnected] = useState(false);
+
+    if (!connected) {
+        return (<div>
+            <p>Vous n'êtes pas connectés ! </p>
+            <button onClick={() => setConnected(true)}> Se connecter </button>
+        </div>)
+    }
+
+    return (
+        //<div> Page 404</div>
+        <Redirect to='/' />
+    )
+};
+
+
+*************************************************************************************
+*************Fin étape 9 : LES HOOKS avec les composants fonctionnels sans état  *********************************
+*************************************************************************************
+
+
+
+
+
+
+*************************************************************************************
+*************Étape 10 : Propriétés liés au composant Route (historique, location, etc..) *********************************
+*************************************************************************************
+
+const checkProps = (props) => {
+
+    return (<div> Vérifier les props qui sont la ! </div>)
+}
+
+Si j'ajoute <CheckProps/> au même niveau que <BrowserRouter>, j'aurai une erreur !
+par contre nous pouvons procéder de cette manière :
+
+
+function App() {
+    return (
+       
+        <BrowserRouter>
+            <CheckProps/> etc...
+
+Nous allons maintenant vérifier nos props !!!
+Pour vérifier si nous avons des props, ajoutons un console.log dans CheckProps
+const CheckProps = (props) => {
+    console.log(props);
+    return (<div> Vérifier les props qui sont la ! </div>)
+}
+
+Vérifions !  insspecter le code en utilisant chrome (c'est vide )
+
+Modifions le CheckProps
+function App() {
+    return (
+       
+        <BrowserRouter>
+            <CheckProps  qqchose='abc'/> etc...
+			
+et voilà, j'ai finalement quelquechose affichée sur la console
+{qqchose: 'abc'}
+
+
+Nous allons refaire les mêmes manipulations sur un composant dans une ROUTE !!!!
+Voici les composants (contrairement à CheckProps) qui sont appelés dans des routes 
+Accueil, Faq, Cgv, Page404 etc...
+				<Route path="/" component={Accueil} exact={true} />
+                <Route path="/faq" component={Faq} />
+                <Route path="/cgv" component={Cgv} />
+                <Route path="*" component={Page404} />
+
+Testons Faq, ajoutons le mot clé props à l'intérieur !
+et appliquons un console.log 
+
+const Faq = (props) => {
+    console.log(props);
+    return (
+        <div>
+            Je suis la foire aux questions
+
+        </div>)
+
+};
+
+Testons ! Cliquez sur le FAQ et observez !
+
+Bien que je n'ai rien passé comme props, j'ai une liste intéressante de props ?????
+
+{
+    "history": {
+        "length": 30,
+        "action": "PUSH",
+        "location": {
+            "pathname": "/faq",
+            "search": "",
+            "hash": "",
+            "state": null,
+            "key": "6a5z40"
+        }
+    },
+    "location": {
+        "pathname": "/faq",
+        "search": "",
+        "hash": "",
+        "state": null,
+        "key": "6a5z40"
+    },
+    "match": {
+        "path": "/faq",
+        "url": "/faq",
+        "isExact": true,
+        "params": {}
+    }
+}
+
+
+Évaluation formative 3 : Essayez de faire la même chose avec les autres composants Cgv et Accueil !
+
+
+*************************************************************************************
+*************Fin de l'étape 10 : Propriétés liés au composant Route (historique, location, etc..) *********************************
+*************************************************************************************
+
+
+
+
+*************************************************************************************
+*************Étape 11 : Intéressant pour les composants dans des routes !!! ********
+Mais pas pour les autres ? ==> Solution : HOC
+*************************************************************************************
+
+***** Faq, Cgv , Accueil ...sont-ils chanceux avec leurs props??**********************
+******CheckProps est jaloux ! lui , il n' pas des props comme les autres **********
+******Tout simplement, pcqu'il n'est pas appelé dans une Route !!!***********
+
+Y-a-il une façon pour que CheckProps aussi accède à ces props intéressantes ??
+
+Solution ==> HIGH ORDER COMPONENT , les HOC !!!
+C'est quoi un HOC (High Order Component)??? 
+Il s'agit d'un composant boosté avec des fonctionnalités en plus. Ces 
+fonctionnalités seront accessibles dans les props !!!!
+Il s'agit d'un composant qui va nous permettre d'attribuer à des composants 
+qui ne font pas partie directement de votre routeur (ne sont pas des routes)
+d'avoir les mêmes fonctionnalités que nous avons précédemment vu dans l'étape 
+précédente avec des composants appelés dans des routes (propriétés liés à un routeur).
+
+Il s'agit de l'utilisation d'une fonction (withRouter) qui va renvoyer un composant boosté
+La fonction prend un composant en argument et renvoie un  super composant ! (composant boosté avec des 
+fonctionnalités en plus qui sont accessibles à travers les props comme hisstory, location etc...)
+
+Passons à la pratique : 
+
+Testons 
+
+const CheckProps = (props) => {
+    console.log('Voici mon composant boosté ! ' + props + ' avec withRouter !!!');
+    console.log(props);
+    return (<div> Vérifier les props qui sont la ! </div>)
+}
+
+const CheckPropsWithRouter = withRouter(CheckProps);
+
+
+
+Dans la fonction App :
+
+
+function App() {
+    return (
+       
+        <BrowserRouter>
+            {/*<CheckProps  qqchose='abc'/>*/}
+            <CheckPropsWithRouter />
+            <header>
+                <h2>Menu </h2>
+                <ul> etc....................
+
+
+
+Le composant CheckProps a les mêmes props que les composants dans des routes? intéressant !
+(CheckProps n'est pas appelé pourtant avec une route !!!!! C'est grâce aux HOC...
+N'oublions que ces props proviennent de la librairie ReactRouter..
+
+
+
+*************************************************************************************
+*************Fin Étape 11 : Intéressant pour les composants dans des routes !!! ********
+Mais pas pour les autres ? ==> Solution : HOC
+*************************************************************************************
+
+
+
+
+*************************************************************************************
+************* Étape 12 : Explorons les props de ReactRouter en profondeur !!*********
+*************************************************************************************
+Nous avons history, location, match, staticContext au même niveau !!
+Cliquez sur history et observez les fonctions dedans !!
+Choisissons un composant par exemple CGV !!
+Ajoutons deux boutons dans la div retournée par CGV
+
+Voici l'ancien Cgv ===>
+const Cgv = () => {
+    return (
+        <div>
+            Je suis les conditions générales de ventes
+<button 
+        </div>)
+};
+
+Voici le nouveau Cgv ==>
+
+const Cgv = (props) => {
+    return (
+        <div>
+            Je suis les conditions générales de ventes ! <br/> <br/>
+            <button onClick={()=>{props.history.goBack()}}> Reculez CTL+Z !</button> <br/> <br/>
+            <button onClick={()=>{props.history.goForward()}}> Avancez  CTL+Y!</button> <br/>
+        </div>)
+};
+
+Testez en cliquqant sur Accueil. Ensuite, Cliquez sur Conditions de Vente !
+Vous allez voir apparaitre les boutons et lorsque vous cliquez sur la bouton Reculez 
+Vous allez voir que nous reveons en arrière vers Accueil !!!
+
+Pour voir ce que fais la fonction goForward() , ajoutez les boutons aussi dans le composant 
+Accueil !!
+
+Transformez le composant Accueil telque suit :
+
+const Accueil = (props) => { 
+    return (
+        <div>
+            Je suis la page d'Accueil! <br/> <br/>
+            <button onClick={()=>{props.history.goBack()}}> Reculez CTL+Z !</button> <br/> <br/>
+            <button onClick={()=>{props.history.goForward()}}> Avancez  CTL+Y!</button> <br/>
+        </div>) 
+
+
+};
+
+Cliquez sur le lien Accueil  dans votre page web ! Cliquez ensuite sur conditions de vente! 
+Cliquez sur le bouton Reculez (dans Conditions de ventes CGV) ==> ça nous ramène vers Accueil !
+Cliquez sur le bouton Avancez (dans Accueil) ==> ça nous ramène vers CGV !!!
+Cinclusion, ça fonctionne comme un ctl-z et comme un ctl-y !
+
+
+*************************************************************************************
+************* Fin Étape 12 : Explorons les props de ReactRouter en profondeur !!*********
+*************************************************************************************
+
+
+*************************************************************************************
+************* Étape 13 : Après goBack() et goForward(), explorons la fonction push()*********
+*************************************************************************************
+Nous avions testé le goBack() et goForward() dans les composants Accueil et CGV (conditions de vente)
+Testons la fonction push() dans note HOC CheckProps
+
+Ancien code :
+
+const CheckProps = (props) => {
+    console.log('Voici mon composant boosté ! ' + props + ' avec withRouter !!!');
+    console.log(props);
+    return (<div> Vérifier les props qui sont la ! </div>)
+}
+
+Nouveau code :
+
+const CheckProps = (props) => {
+    console.log(props);
+    return (<div>
+        <button onClick={ ()=>{}}> Allez sur la  FAQ </button>
+    </div>)
+}
+
+Encore le code final :
+
+const CheckProps = (props) => {
+    console.log(props);
+    return (<div>
+        <button onClick={() => {
+            props.history.push({
+                pathname: 'faq',
+                state: { params: 'abcdefghijklmnop' }
+            })
+        }}> Allez sur la  FAQ </button>
+    </div>)
+}
+
+Allez dans location et oservez ce qui a été passé à partir de notre action push()
+Nous avons passé des paramètres !
+
+Évaluation Formative 4 : Passez d'autres paramètres autre que  { params: 'abcdefghijklmnop' }
+ 
+
+
+*************************************************************************************
+************* Fin de l'étape 13 : Après goBack() et goForward(), explorons la fonction push()*********
+*************************************************************************************
+
+Bravo ! Nous avons fini avec ce lab introductif de ReactRouter et les Hooks 
+Passons  au PROJET !
