@@ -44,9 +44,7 @@ Après avoir terminé et testé l'exercice formatif, passons à l'exercice éval
     { id: 19, title: 'Article 19', summary: 'Résumé de l\'article 19. Gestion avancée des erreurs dans React applications.' },
     { id: 20, title: 'Article 20', summary: 'Résumé de l\'article 20. Utiliser Webpack pour optimiser vos applications React.' },
 ];
-
     ```
-
 2. **Affichage des résultats de recherche :** Modifiez le composant `SearchResultsPage` pour afficher une liste des titres des articles. Pour simplifier, vous pouvez considérer que tous les articles correspondent au terme de recherche.
 
 3. **Détails de l'article :** Créez un nouveau composant `ArticleDetailsPage` qui affiche le titre et le résumé d'un article. Utilisez `useParams` pour récupérer l'ID de l'article depuis l'URL.
