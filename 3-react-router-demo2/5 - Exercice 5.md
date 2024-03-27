@@ -20,7 +20,7 @@ Après avoir terminé et testé l'exercice formatif, passons à l'exercice éval
 
 1. **Extension du modèle de données :** Créez un fichier `data.js` dans le dossier `src` qui exporte un tableau d'objets représentant des articles de blog. Chaque objet doit avoir un `id`, un `title`, et un `summary`.
 
-    ```js
+```js
     // data.js
    export const articles = [
     { id: 1, title: 'Article 1', summary: 'Résumé de l\'article 1. Ceci est une introduction à React Router.' },
@@ -42,16 +42,16 @@ Après avoir terminé et testé l'exercice formatif, passons à l'exercice éval
     { id: 17, title: 'Article 17', summary: 'Résumé de l\'article 17. Déploiement et hosting d\'applications React.' },
     { id: 18, title: 'Article 18', summary: 'Résumé de l\'article 18. Introduction à l\'animation dans React applications.' },
     { id: 19, title: 'Article 19', summary: 'Résumé de l\'article 19. Gestion avancée des erreurs dans React applications.' },
-    { id: 20, title: 'Article 20', summary: 'Résumé de l\'article 20. Utiliser Webpack pour optimiser vos applications React.' },
-];
+    { id: 20, title: 'Article 20', summary: 'Résumé de l\'article 20. Utiliser Webpack pour optimiser vos applications React.' },];
+
     ```
-2. **Affichage des résultats de recherche :** Modifiez le composant `SearchResultsPage` pour afficher une liste des titres des articles. Pour simplifier, vous pouvez considérer que tous les articles correspondent au terme de recherche.
+3. **Affichage des résultats de recherche :** Modifiez le composant `SearchResultsPage` pour afficher une liste des titres des articles. Pour simplifier, vous pouvez considérer que tous les articles correspondent au terme de recherche.
 
-3. **Détails de l'article :** Créez un nouveau composant `ArticleDetailsPage` qui affiche le titre et le résumé d'un article. Utilisez `useParams` pour récupérer l'ID de l'article depuis l'URL.
+4. **Détails de l'article :** Créez un nouveau composant `ArticleDetailsPage` qui affiche le titre et le résumé d'un article. Utilisez `useParams` pour récupérer l'ID de l'article depuis l'URL.
 
-4. **Navigation vers les détails de l'article :** Dans `SearchResultsPage`, rendez chaque titre d'article cliquable, de sorte qu'en cliquant sur un titre, l'utilisateur est redirigé vers la page de détails de l'article correspondant. Utilisez `useNavigate` ou le composant `Link` de `react-router-dom` pour gérer cette navigation.
+5. **Navigation vers les détails de l'article :** Dans `SearchResultsPage`, rendez chaque titre d'article cliquable, de sorte qu'en cliquant sur un titre, l'utilisateur est redirigé vers la page de détails de l'article correspondant. Utilisez `useNavigate` ou le composant `Link` de `react-router-dom` pour gérer cette navigation.
 
-5. **Configuration des routes :** Ajoutez une route dans `App.js` pour les détails de l'article, par exemple `/articles/:id`.
+6. **Configuration des routes :** Ajoutez une route dans `App.js` pour les détails de l'article, par exemple `/articles/:id`.
 
 **Critères d'évaluation :**
 
