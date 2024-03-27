@@ -1,4 +1,4 @@
-### Exercice formatif
+# Exercice formatif
 
 **Objectif :** Créer une application React simple qui utilise React Router pour naviguer entre une page d'accueil et une page de résultats de recherche, en passant le terme de recherche via l'URL.
 
@@ -10,7 +10,7 @@
 
 Après avoir terminé et testé l'exercice formatif, passons à l'exercice évalué qui comprendra des fonctionnalités supplémentaires et nécessitera une compréhension plus approfondie de React Router, ainsi que des manipulations plus avancées des états et des paramètres d'URL.
 
-### Exercice évalué
+# Exercice évalué
 
 **Objectif :** Étendre l'application de l'exercice formatif pour inclure une fonctionnalité de visualisation des détails d'un élément de recherche simulé, en utilisant un ensemble de données statiques.
 
@@ -22,11 +22,29 @@ Après avoir terminé et testé l'exercice formatif, passons à l'exercice éval
 
     ```js
     // data.js
-    export const articles = [
-        { id: 1, title: 'Article 1', summary: 'Résumé de l\'article 1' },
-        { id: 2, title: 'Article 2', summary: 'Résumé de l\'article 2' },
-        // Ajoutez plus d'articles ici
-    ];
+   export const articles = [
+    { id: 1, title: 'Article 1', summary: 'Résumé de l\'article 1. Ceci est une introduction à React Router.' },
+    { id: 2, title: 'Article 2', summary: 'Résumé de l\'article 2. Apprenez à gérer le state dans React.' },
+    { id: 3, title: 'Article 3', summary: 'Résumé de l\'article 3. Comprendre les Hooks dans React.' },
+    { id: 4, title: 'Article 4', summary: 'Résumé de l\'article 4. Introduction aux Contextes dans React.' },
+    { id: 5, title: 'Article 5', summary: 'Résumé de l\'article 5. Optimisation des performances dans React applications.' },
+    { id: 6, title: 'Article 6', summary: 'Résumé de l\'article 6. Stratégies de test pour les applications React.' },
+    { id: 7, title: 'Article 7', summary: 'Résumé de l\'article 7. Utiliser Redux pour gérer l\'état global.' },
+    { id: 8, title: 'Article 8', summary: 'Résumé de l\'article 8. React Router: Avancé techniques et astuces.' },
+    { id: 9, title: 'Article 9', summary: 'Résumé de l\'article 9. Construire des formulaires dynamiques avec React.' },
+    { id: 10, title: 'Article 10', summary: 'Résumé de l\'article 10. Introduction à GraphQL dans les applications React.' },
+    { id: 11, title: 'Article 11', summary: 'Résumé de l\'article 11. Gérer les side-effects dans React avec useEffect.' },
+    { id: 12, title: 'Article 12', summary: 'Résumé de l\'article 12. Créer une application e-commerce avec React.' },
+    { id: 13, title: 'Article 13', summary: 'Résumé de l\'article 13. Sécurité dans les applications React.' },
+    { id: 14, title: 'Article 14', summary: 'Résumé de l\'article 14. React et TypeScript: Meilleures pratiques.' },
+    { id: 15, title: 'Article 15', summary: 'Résumé de l\'article 15. Construire des applications mobiles avec React Native.' },
+    { id: 16, title: 'Article 16', summary: 'Résumé de l\'article 16. Server-side rendering avec React et Next.js.' },
+    { id: 17, title: 'Article 17', summary: 'Résumé de l\'article 17. Déploiement et hosting d\'applications React.' },
+    { id: 18, title: 'Article 18', summary: 'Résumé de l\'article 18. Introduction à l\'animation dans React applications.' },
+    { id: 19, title: 'Article 19', summary: 'Résumé de l\'article 19. Gestion avancée des erreurs dans React applications.' },
+    { id: 20, title: 'Article 20', summary: 'Résumé de l\'article 20. Utiliser Webpack pour optimiser vos applications React.' },
+];
+
     ```
 
 2. **Affichage des résultats de recherche :** Modifiez le composant `SearchResultsPage` pour afficher une liste des titres des articles. Pour simplifier, vous pouvez considérer que tous les articles correspondent au terme de recherche.
