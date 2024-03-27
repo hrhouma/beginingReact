@@ -10,7 +10,7 @@
 
 Après avoir terminé et testé l'exercice formatif, passons à l'exercice évalué qui comprendra des fonctionnalités supplémentaires et nécessitera une compréhension plus approfondie de React Router, ainsi que des manipulations plus avancées des états et des paramètres d'URL.
 
-# Exercice évalué
+# Exercice 5 évalué
 
 **Objectif :** Étendre l'application de l'exercice formatif pour inclure une fonctionnalité de visualisation des détails d'un élément de recherche simulé, en utilisant un ensemble de données statiques.
 
