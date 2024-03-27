@@ -2,6 +2,7 @@
 
 #### Introduction
 - Dans cette évaluation, vous allez revisiter les concepts de routage dans une application React que nous avons explorés en classe.
+https://github.com/hrhouma/beginingReact/blob/main/3-react-router-demo2/3%20-%20Suite%20Concepts%201%20(pratique2%20-%20demo-react-router-dom-v5)
 - Toutefois, il y aura une variation cruciale : vous utiliserez `react-router-dom` version 6 au lieu de la version 5 que nous avons utilisée en classe.
 - Cela vous donnera l'opportunité de vous familiariser avec les améliorations et les différences introduites dans cette nouvelle version.
 
@@ -17,7 +18,8 @@ Votre tâche consiste à refaire les étapes que nous avons pratiquées en class
 Pour réaliser cette évaluation, veuillez consulter la documentation officielle de `react-router-dom` version 6 afin de vous familiariser avec les changements et les nouvelles pratiques recommandées. Adaptez ensuite les exemples et les exercices faits en classe à cette nouvelle version.
 
 #### Livrables
-Votre rendu final devra être un projet React qui intègre `react-router-dom` v6 pour le routage. Assurez-vous que toutes les fonctionnalités de routage que nous avons abordées en classe sont mises en œuvre avec succès dans votre projet en utilisant la version 6 de la librairie.
+- Votre rendu final devra être un rapport  qui intègre toutes les étapes comme iliisutré ici : https://github.com/hrhouma/beginingReact/blob/main/3-react-router-demo2/3%20-%20Suite%20Concepts%201%20(pratique2%20-%20demo-react-router-dom-v5) mais en utilisant `react-router-dom` v6 pour le routage. 
+- Assurez-vous que toutes les fonctionnalités de routage que nous avons abordées en classe sont mises en œuvre avec succès dans votre projet en utilisant la version 6 de la librairie.
 
 #### Critères d'évaluation
 - Correcte mise en place du routage avec `react-router-dom` v6.
