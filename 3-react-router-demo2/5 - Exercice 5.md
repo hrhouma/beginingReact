@@ -4,7 +4,7 @@
 
 **Instructions :**
 
-1. Suivez le tutoriel fourni (Exercice formatif) pour mettre en place l'application.
+1. Suivez le tutoriel fourni (Exercice formatif) pour mettre en place l'application : https://github.com/hrhouma/beginingReact/blob/main/3-react-router-demo2/4%20-%20%20Exercice%20formatif%20react-router-dom-6.md
 2. Testez votre application pour vous assurer que la navigation et le passage des données fonctionnent comme attendu.
 3. (Optionnel) Ajoutez des styles CSS à votre application pour améliorer son apparence.
 
