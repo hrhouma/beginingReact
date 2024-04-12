@@ -17,6 +17,7 @@ Vous avez déjà travaillé sur une application qui récupère des informations 
      - **Language**: Montre les langues parlées dans un pays.
      - **Capital City**: Affiche la capitale du pays.
      - **Calling Code**: Affiche le code d'appel du pays.
+     - **Autre** : Explorez https://restcountries.com/ et ragrdez les endpoints etc ....
    - Vous pouvez accéder à l'API via des requêtes fetch dans React.
 
 3. **Nouvelle Page** :
