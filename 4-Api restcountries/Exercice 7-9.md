@@ -1,38 +1,40 @@
-# Exercice de Programmation (Exercice 7, Exercice 8 et Exercice 9) : Extension d'une Application avec React Router DOM v6 et REST Countries API
+# Exercice de Programmation : Extension d'une Application avec React Router DOM v6 et REST Countries API
 
-### Objectif
-L'objectif de cet exercice est de développer votre compréhension de React, en particulier l'utilisation de `react-router-dom` version 6, ainsi que l'intégration d'API externes. Vous allez étendre une application existante qui utilise l'API REST Countries pour inclure des fonctionnalités supplémentaires.
+## Objectif
+Développer une compréhension approfondie de React, en particulier l'utilisation de `react-router-dom` version 6 et l'intégration d'APIs externes comme REST Countries API. L'exercice consiste à étendre une application existante pour y ajouter des fonctionnalités supplémentaires.
 
-### Contexte
-Vous avez déjà travaillé sur une application qui récupère des informations sur les pays en utilisant deux appels API spécifiques à REST Countries. Dans cet exercice, vous ajouterez une nouvelle page à cette application qui utilisera un autre endpoint de l'API REST Countries pour afficher des informations plus détaillées ou différentes.
+## Contexte
+Vous avez précédemment travaillé sur une application récupérant des informations sur les pays via l'API REST Countries. Vous ajouterez une page qui consommera un autre endpoint de cette API pour afficher des informations plus détaillées.
 
-### Exigences Techniques
-1. **React et React Router DOM** :
-   - Utilisez React pour le framework frontal.
-   - Intégrez `react-router-dom` version 6 pour la gestion des routes. Utilisez les composants `Routes` et `Route` au lieu de `Switch`, qui est obsolète dans cette version.
-  
-2. **API REST Countries** :
-   - Intégrez un nouveau endpoint de l'API REST Countries. Choisissez parmi les suivants : 
-     - **Currency**: Affiche des informations sur la devise d'un pays.
-     - **Language**: Montre les langues parlées dans un pays.
-     - **Capital City**: Affiche la capitale du pays.
-     - **Calling Code**: Affiche le code d'appel du pays.
-     - **Autre** : Explorez https://restcountries.com/ et ragrdez les endpoints etc ....
-   - Vous pouvez accéder à l'API via des requêtes fetch dans React.
+## Exigences Techniques
+1. **React et React Router DOM**:
+   - Utilisez React comme framework frontal.
+   - Intégrez `react-router-dom` version 6 pour la gestion des routes. Remplacez l'usage de `Switch` par `Routes` et `Route`, `Switch` étant obsolète.
 
-3. **Nouvelle Page** :
-   - Créez une nouvelle page dans l'application qui utilise le endpoint sélectionné.
-   - La page doit être accessible via la navigation de l'application et intégrée avec React Router.
+2. **API REST Countries**:
+   - Intégrez un nouvel endpoint de l'API REST Countries, choisissez parmi les suivants :
+     - **Currency**: Informations sur la devise d'un pays.
+     - **Language**: Langues parlées dans un pays.
+     - **Capital City**: Capitale du pays.
+     - **Calling Code**: Code d'appel du pays.
+     - **Autre**: Explorez d'autres endpoints disponibles sur [REST Countries](https://restcountries.com/).
+   - Utilisez des requêtes fetch dans React pour accéder à l'API.
+
+3. **Nouvelle Page**:
+   - Créez une page dans l'application pour le nouvel endpoint sélectionné.
+   - Rendez cette page accessible via la navigation de l'application et intégrez-la avec React Router.
 
 ## Consignes
-# 1. **Consultez les travaux réalisés en classe** :
-    - 1.1. Documentation de l'application Drapeau version finale ( Restcountries version 3.1 et react-router-dom version 5): https://docs.google.com/document/d/1zSijnLruezkFCCT5aU88GLBufukFgDQazPZb3ZRWUqo/edit?usp=sharing
-    - 1.2. Lien Github :
-         - ### `git clone https://github.com/hrhouma/restcoun_react-router-dom5_api_3.git`
-         - ### `cd restcoun_react-router-dom5_api_3`
-         - ### `npm install`
-         - ### `npm start`
-    - 1.3. Lien API v3 : https://restcountries.com/v3.1/alpha/{code}
+Consultez les travaux réalisés en classe :
+1. **Documentation de l'application Drapeau version finale** (Restcountries version 3.1 et react-router-dom version 5): [Lire la documentation](https://docs.google.com/document/d/1zSijnLruezkFCCT5aU88GLBufukFgDQazPZb3ZRWUqo/edit?usp=sharing)
+2. **Lien Github** :
+   - Clonez le dépôt avec `git clone https://github.com/hrhouma/restcoun_react-router-dom5_api_3.git`
+   - Changez de répertoire avec `cd restcoun_react-router-dom5_api_3`
+   - Installez les dépendances avec `npm install`
+   - Lancez l'application avec `npm start`
+3. **Lien API v3** : [API REST Countries v3](https://restcountries.com/v3.1/alpha/{code})
+
+
 ## Exemples: 
 ![image](https://github.com/hrhouma/beginingReact/assets/10111526/5992452e-0149-4ea8-9113-20602f609705)
 ![image](https://github.com/hrhouma/beginingReact/assets/10111526/47bd2018-773a-4eb8-b3c2-46bad43deb2e)
