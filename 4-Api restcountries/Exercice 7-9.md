@@ -25,21 +25,21 @@ Vous avez précédemment travaillé sur une application récupérant des informa
    - Rendez cette page accessible via la navigation de l'application et intégrez-la avec React Router.
 
 ## Consignes
-Consultez les travaux réalisés en classe :
-1. **Documentation de l'application Drapeau version finale** (Restcountries version 3.1 et react-router-dom version 5): [Lire la documentation](https://docs.google.com/document/d/1zSijnLruezkFCCT5aU88GLBufukFgDQazPZb3ZRWUqo/edit?usp=sharing)
-2. **Lien Github** :
+# 1. Consultez les travaux réalisés en classe :
+1.1. **Documentation de l'application Drapeau version finale** (Restcountries version 3.1 et react-router-dom version 5): [Lire la documentation](https://docs.google.com/document/d/1zSijnLruezkFCCT5aU88GLBufukFgDQazPZb3ZRWUqo/edit?usp=sharing)
+1.2. **Lien Github** :
    - Clonez le dépôt avec `git clone https://github.com/hrhouma/restcoun_react-router-dom5_api_3.git`
    - Changez de répertoire avec `cd restcoun_react-router-dom5_api_3`
    - Installez les dépendances avec `npm install`
    - Lancez l'application avec `npm start`
-3. **Lien API v3** : [API REST Countries v3](https://restcountries.com/v3.1/alpha/{code})
+1.3. **Lien API v3** : [API REST Countries v3](https://restcountries.com/v3.1/alpha/{code})
 
 
 ## Exemples: 
 ![image](https://github.com/hrhouma/beginingReact/assets/10111526/5992452e-0149-4ea8-9113-20602f609705)
 ![image](https://github.com/hrhouma/beginingReact/assets/10111526/47bd2018-773a-4eb8-b3c2-46bad43deb2e)
 
-# (À IGNORER) 2. **Consultez les anciennes versions** :     
+# (À IGNORER) 2. Consultez les anciennes versions :     
     - 2.1. (OPTIONNEL) Documentation de l'ancienne application Drapeau (old)  ( Restcountries version 2 et react-router-dom version 5): https://docs.google.com/document/d/1iYxr2iEA3rqxVu-0mB2SNxY1Dt5jLnrw/edit?usp=sharing&ouid=114388549516551190899&rtpof=true&sd=true
     - 2.2. Lien Github :
          - ### `git clone https://github.com/hrhouma/restcoun_react-router-dom5_api_2.git`
