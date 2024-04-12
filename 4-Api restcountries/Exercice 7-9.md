@@ -45,17 +45,26 @@ Vous avez précédemment travaillé sur une application récupérant des informa
 2.1. **(OPTIONNEL) Documentation de l'ancienne application Drapeau (old)  ( Restcountries version 2 et react-router-dom version 5):**
     - https://docs.google.com/document/d/1iYxr2iEA3rqxVu-0mB2SNxY1Dt5jLnrw/edit?usp=sharing&ouid=114388549516551190899&rtpof=true&sd=true 
     
+
 2.2. **(OPTIONNEL) Lien Github :**
-         - ### `git clone https://github.com/hrhouma/restcoun_react-router-dom5_api_2.git`
-         - ### `cd restcoun_react-router-dom5_api_2`
-         - ### `npm install`
-         - ### `npm start`
-         ## ==> En cas d'erreurs
-         - ### `npm audit fix`
-         - ### `npm start`
-         ## ==> En cas d'erreurs encore
-         - ### `npm audit fix --force` 
-         - ### `npm start` 
+   - Clonez le dépôt :
+     ```
+     git clone https://github.com/hrhouma/restcoun_react-router-dom5_api_2.git
+     cd restcoun_react-router-dom5_api_2
+     npm install
+     npm start
+     ```
+   - En cas d'erreurs, exécutez :
+     ```
+     npm audit fix
+     npm start
+     ```
+   - Si les erreurs persistent :
+     ```
+     npm audit fix --force
+     npm start
+     ```
+
          
   2.3. **Lien API v2 :** [API REST Countries v2](https://restcountries.eu/rest/v2/) 
 
