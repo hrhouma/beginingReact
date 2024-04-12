@@ -32,7 +32,8 @@ Vous avez précédemment travaillé sur une application récupérant des informa
    - Changez de répertoire avec `cd restcoun_react-router-dom5_api_3`
    - Installez les dépendances avec `npm install`
    - Lancez l'application avec `npm start`
-1.3. **Lien API v3** : [API REST Countries v3](https://restcountries.com/v3.1/alpha/{code})
+
+1.3.**Lien API v3** : [API REST Countries v3](https://restcountries.com/v3.1/alpha/{code})
 
 
 ## Exemples: 
