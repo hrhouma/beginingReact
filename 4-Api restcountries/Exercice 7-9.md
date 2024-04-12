@@ -72,22 +72,26 @@ Vous avez précédemment travaillé sur une application récupérant des informa
 ![image](https://github.com/hrhouma/beginingReact/assets/10111526/a4f27890-ad39-42f5-9aa8-41b6fb09d665)
 ![image](https://github.com/hrhouma/beginingReact/assets/10111526/8a3bc7d0-1f56-49ed-8089-0f0d9f213e31)
 ![image](https://github.com/hrhouma/beginingReact/assets/10111526/7058ef78-98d2-43ed-adc0-cc4156cba4a8)
+
 # (À IGNORER) 3. **Autre documentation optionelle** 
-     - 3.1. (OPTIONNEL) Autre documentation optionelle (ateliers introduction react-router-dom + projets de restcountries): https://drive.google.com/drive/folders/1AEVUnc6X0h2ebLexpG3hQl6K2Wu2_I_Q?usp=sharing
+
+3.1.**(OPTIONNEL) Autre documentation optionelle (ateliers introduction react-router-dom + projets de restcountries):** https://drive.google.com/drive/folders/1AEVUnc6X0h2ebLexpG3hQl6K2Wu2_I_Q?usp=sharing
 
 # 4. **Démarrez votre projet ** 
- ## 4.1. **Démarrez un nouveau projet en utilisant les commandes suivantes**:  
+
+4.1. **Démarrez un nouveau projet en utilisant les commandes suivantes**:  
     - ### `npm install -g create-react-app`
     - ### `npx creare-recat-app exercice789`
     - ### `cd exercice789`
     - ### `npm start`
- ## 4.2. **(Optionnel) Clonez le projet initial pour votre référence (comme autre projet) ** : 
+ 4.2. **(Optionnel) Clonez le projet initial pour votre référence (comme autre projet)** : 
    - Lien --> https://github.com/hrhouma/restcoun_react-router-dom5_api_3
    - ou ### `git clone https://github.com/hrhouma/restcoun_react-router-dom5_api_3.git`
- ## 4.3. **Installation** :
+ 4.3. **Installation** :
    - Installez les dépendances nécessaires via npm.
          - ### `npm install react-router-dom --save` 
    - Assurez-vous que `react-router-dom` est mis à jour à la version 6 en vérifiant dans votre fichier package.json.
+     
 4. **Consultez l'API restcountries** : https://restcountries.com/
 5. **Faites votre choix de l'endpoint ici** : https://docs.google.com/document/d/1M28QPFBGTG0DcTDMMwoUiGDPSXKzzWRyCvOmZyW8Mvw/edit?usp=sharing
 6. **Développement** :
