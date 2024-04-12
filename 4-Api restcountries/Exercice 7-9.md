@@ -24,20 +24,26 @@ Vous avez déjà travaillé sur une application qui récupère des informations 
    - La page doit être accessible via la navigation de l'application et intégrée avec React Router.
 
 ### Consignes
-2. **Clonez le projet initial** 
-3. **Installation** :
+1. **Consultez les travaux réalisés en classe** :
+2. **Démarrez un nouveau projet en utilisant les commandes suivantes**:  
+    - npm install -g create-react-app
+    - npx creare-recat-app exercice789
+    - cd exercice789
+    - npm start
+3. **(Optionnel) Clonez le projet initial pour votre référence** : Lien --> 
+5. **Installation** :
    - Installez les dépendances nécessaires via npm.
    - Assurez-vous que `react-router-dom` est mis à jour à la version 6.
-4. **Consultez l'API restcountries** : https://restcountries.com/
-5. **Faites votre choix de l'endpoint ici** : https://docs.google.com/document/d/1M28QPFBGTG0DcTDMMwoUiGDPSXKzzWRyCvOmZyW8Mvw/edit?usp=sharing
-6. **Développement** :
+6. **Consultez l'API restcountries** : https://restcountries.com/
+7. **Faites votre choix de l'endpoint ici** : https://docs.google.com/document/d/1M28QPFBGTG0DcTDMMwoUiGDPSXKzzWRyCvOmZyW8Mvw/edit?usp=sharing
+8. **Développement** :
    - Ajoutez une nouvelle route pour votre nouvelle page utilisant le endpoint choisi.
    - Implémentez la logique pour fetcher les données de l'API et les afficher de manière appropriée sur la page.
 
 ### Livrables
 - (Optionnel) Soumettez votre code via un pull request sur le repository de classe (lien suivra). 
 - (Obligatoire - Imprimes-écrans et petit rapport) Assurez-vous d'inclure des captures d'écran de votre nouvelle fonctionnalité en action, ainsi qu'une brève description des défis rencontrés et comment vous les avez surmontés.
-- (obligatoire) - Soumettre le code via LÉA sans le dossier nodes_modules
+- (Obligatoire) - Soumettre le code via LÉA sans le dossier nodes_modules
 - (Obligatoire) : Je fais le tour le 17 mai pour consulter votre travail. 
 
 ### Évaluation
