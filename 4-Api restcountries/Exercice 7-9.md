@@ -27,13 +27,14 @@ Vous avez précédemment travaillé sur une application récupérant des informa
 ## Consignes
 # 1. Consultez les travaux réalisés en classe :
 1.1. **Documentation de l'application Drapeau version finale** (Restcountries version 3.1 et react-router-dom version 5): [Lire la documentation](https://docs.google.com/document/d/1zSijnLruezkFCCT5aU88GLBufukFgDQazPZb3ZRWUqo/edit?usp=sharing)
+
 1.2. **Lien Github** :
    - Clonez le dépôt avec `git clone https://github.com/hrhouma/restcoun_react-router-dom5_api_3.git`
    - Changez de répertoire avec `cd restcoun_react-router-dom5_api_3`
    - Installez les dépendances avec `npm install`
    - Lancez l'application avec `npm start`
 
-1.3.**Lien API v3** : [API REST Countries v3](https://restcountries.com/v3.1/)
+1.3.**Lien API v3** : https://restcountries.com/v3.1/
 
 
 ## Exemples: 
@@ -66,7 +67,7 @@ Vous avez précédemment travaillé sur une application récupérant des informa
      ```
 
          
-  2.3. **Lien API v2 :** [API REST Countries v2](https://restcountries.eu/rest/v2/) 
+  2.3. **Lien API v2 :** https://restcountries.eu/rest/v2/
 
 ## Exemples: 
 ![image](https://github.com/hrhouma/beginingReact/assets/10111526/a4f27890-ad39-42f5-9aa8-41b6fb09d665)
