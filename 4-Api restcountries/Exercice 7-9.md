@@ -52,7 +52,9 @@ Vous avez déjà travaillé sur une application qui récupère des informations 
          - ### `npm audit fix --force` 
          - ### `npm start`
     - 2.3. Lien API v2 :
+## Exemples: 
 ![image](https://github.com/hrhouma/beginingReact/assets/10111526/a4f27890-ad39-42f5-9aa8-41b6fb09d665)
+![image](https://github.com/hrhouma/beginingReact/assets/10111526/8a3bc7d0-1f56-49ed-8089-0f0d9f213e31)
 
 # (À IGNORER) 3. **Autre documentation optionelle** 
      - 3.1. (OPTIONNEL) Autre documentation optionelle (ateliers introduction react-router-dom + projets de restcountries): https://drive.google.com/drive/folders/1AEVUnc6X0h2ebLexpG3hQl6K2Wu2_I_Q?usp=sharing
