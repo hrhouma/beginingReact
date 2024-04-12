@@ -28,12 +28,16 @@ Vous avez déjà travaillé sur une application qui récupère des informations 
 1. **Consultez les travaux réalisés en classe** :
     - Documentation de l'application Drapeau version finale ( Restcountries version 3.1 et react-router-dom version 5): https://docs.google.com/document/d/1zSijnLruezkFCCT5aU88GLBufukFgDQazPZb3ZRWUqo/edit?usp=sharing
     - Lien Github :
-         - git clone https://github.com/hrhouma/restcoun_react-router-dom5_api_3.git
-         - cd restcoun_react-router-dom5_api_3
-         - npm install
-         - npm start 
+         - ### `git clone https://github.com/hrhouma/restcoun_react-router-dom5_api_3.git`
+         - ### `cd restcoun_react-router-dom5_api_3`
+         - ### `npm install`
+         - ### `npm start` 
     - Documentation de l'ancienne application Drapeau (old)  ( Restcountries version 2 et react-router-dom version 5): https://docs.google.com/document/d/1iYxr2iEA3rqxVu-0mB2SNxY1Dt5jLnrw/edit?usp=sharing&ouid=114388549516551190899&rtpof=true&sd=true
-    - Lien Github : 
+    - Lien Github :
+         - ### `git clone https://github.com/hrhouma/restcoun_react-router-dom5_api_3.git`
+         - ### `cd restcoun_react-router-dom5_api_3`
+         - ### `npm install`
+         - ### `npm start` 
     - Autre documentation optionelle (ateliers introduction react-router-dom + projets de restcountries): https://drive.google.com/drive/folders/1AEVUnc6X0h2ebLexpG3hQl6K2Wu2_I_Q?usp=sharing
     - Liens Github:
 2. **Démarrez un nouveau projet en utilisant les commandes suivantes**:  
