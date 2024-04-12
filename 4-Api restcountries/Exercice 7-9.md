@@ -40,7 +40,9 @@ Vous avez précédemment travaillé sur une application récupérant des informa
 ![image](https://github.com/hrhouma/beginingReact/assets/10111526/5992452e-0149-4ea8-9113-20602f609705)
 ![image](https://github.com/hrhouma/beginingReact/assets/10111526/47bd2018-773a-4eb8-b3c2-46bad43deb2e)
 
-# (À IGNORER) 2. Consultez les anciennes versions :     
+# (À IGNORER) 2. Consultez les anciennes versions : 
+
+2.1. **Documentation de l'application Drapeau version finale**
     - 2.1. (OPTIONNEL) Documentation de l'ancienne application Drapeau (old)  ( Restcountries version 2 et react-router-dom version 5): https://docs.google.com/document/d/1iYxr2iEA3rqxVu-0mB2SNxY1Dt5jLnrw/edit?usp=sharing&ouid=114388549516551190899&rtpof=true&sd=true
     - 2.2. Lien Github :
          - ### `git clone https://github.com/hrhouma/restcoun_react-router-dom5_api_2.git`
