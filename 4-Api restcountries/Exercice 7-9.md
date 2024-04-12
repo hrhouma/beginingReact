@@ -36,8 +36,6 @@ Vous avez déjà travaillé sur une application qui récupère des informations 
 ## Exemples: 
 ![image](https://github.com/hrhouma/beginingReact/assets/10111526/5992452e-0149-4ea8-9113-20602f609705)
 ![image](https://github.com/hrhouma/beginingReact/assets/10111526/47bd2018-773a-4eb8-b3c2-46bad43deb2e)
-![image](https://github.com/hrhouma/beginingReact/assets/10111526/7058ef78-98d2-43ed-adc0-cc4156cba4a8)
-
 
 # (À IGNORER) 2. **Consultez les anciennes versions** :     
     - 2.1. (OPTIONNEL) Documentation de l'ancienne application Drapeau (old)  ( Restcountries version 2 et react-router-dom version 5): https://docs.google.com/document/d/1iYxr2iEA3rqxVu-0mB2SNxY1Dt5jLnrw/edit?usp=sharing&ouid=114388549516551190899&rtpof=true&sd=true
@@ -56,7 +54,7 @@ Vous avez déjà travaillé sur une application qui récupère des informations 
 ## Exemples: 
 ![image](https://github.com/hrhouma/beginingReact/assets/10111526/a4f27890-ad39-42f5-9aa8-41b6fb09d665)
 ![image](https://github.com/hrhouma/beginingReact/assets/10111526/8a3bc7d0-1f56-49ed-8089-0f0d9f213e31)
-
+![image](https://github.com/hrhouma/beginingReact/assets/10111526/7058ef78-98d2-43ed-adc0-cc4156cba4a8)
 # (À IGNORER) 3. **Autre documentation optionelle** 
      - 3.1. (OPTIONNEL) Autre documentation optionelle (ateliers introduction react-router-dom + projets de restcountries): https://drive.google.com/drive/folders/1AEVUnc6X0h2ebLexpG3hQl6K2Wu2_I_Q?usp=sharing
 
