@@ -36,6 +36,7 @@ Vous avez déjà travaillé sur une application qui récupère des informations 
 ## Exemples: 
 ![image](https://github.com/hrhouma/beginingReact/assets/10111526/5992452e-0149-4ea8-9113-20602f609705)
 ![image](https://github.com/hrhouma/beginingReact/assets/10111526/47bd2018-773a-4eb8-b3c2-46bad43deb2e)
+![image](https://github.com/hrhouma/beginingReact/assets/10111526/7058ef78-98d2-43ed-adc0-cc4156cba4a8)
 
 
 # (À IGNORER) 2. **Consultez les anciennes versions** :     
