@@ -11,6 +11,10 @@ Vous avez précédemment travaillé sur une application récupérant des informa
    - Utilisez React comme framework frontal.
    - Intégrez `react-router-dom` version 6 pour la gestion des routes. Remplacez l'usage de `Switch` par `Routes` et `Route`, `Switch` étant obsolète.
 
+## Documentation officielle de react-router-dom : 
+   - **react-router-dom version 5 :** https://v5.reactrouter.com/web/guides/quick-start
+   - **react-router-dom version 6 :** https://reactrouter.com/en/main
+     
 2. **API REST Countries**:
    - Intégrez un nouvel endpoint de l'API REST Countries, choisissez parmi les suivants :
      - **Currency**: Informations sur la devise d'un pays.
@@ -18,6 +22,7 @@ Vous avez précédemment travaillé sur une application récupérant des informa
      - **Capital City**: Capitale du pays.
      - **Calling Code**: Code d'appel du pays.
      - **Autre**: Explorez d'autres endpoints disponibles sur [REST Countries](https://restcountries.com/).
+     - **endpoints-code**: https://restcountries.com/#endpoints-code
    - Utilisez des requêtes fetch dans React pour accéder à l'API.
 
 3. **Nouvelle Page**:
