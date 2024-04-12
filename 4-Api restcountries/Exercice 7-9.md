@@ -32,7 +32,8 @@ Vous avez déjà travaillé sur une application qui récupère des informations 
          - ### `cd restcoun_react-router-dom5_api_3`
          - ### `npm install`
          - ### `npm start`
-         
+    - Lien API v3 : https://restcountries.com/v3.1/alpha/{code}
+        
     - (OPTIONNEL) Documentation de l'ancienne application Drapeau (old)  ( Restcountries version 2 et react-router-dom version 5): https://docs.google.com/document/d/1iYxr2iEA3rqxVu-0mB2SNxY1Dt5jLnrw/edit?usp=sharing&ouid=114388549516551190899&rtpof=true&sd=true
     - Lien Github :
          - ### `git clone https://github.com/hrhouma/restcoun_react-router-dom5_api_3.git`
@@ -44,15 +45,18 @@ Vous avez déjà travaillé sur une application qui récupère des informations 
          - ### `npm start`
          ## ==> En cas d'erreurs encore
          - ### `npm audit fix --force` 
-         - ### `npm start` 
+         - ### `npm start`
+- Lien API v2 :
+![image](https://github.com/hrhouma/beginingReact/assets/10111526/a4f27890-ad39-42f5-9aa8-41b6fb09d665)
+
     - (OPTIONNEL) Autre documentation optionelle (ateliers introduction react-router-dom + projets de restcountries): https://drive.google.com/drive/folders/1AEVUnc6X0h2ebLexpG3hQl6K2Wu2_I_Q?usp=sharing
-    - Liens Github:
-2. **Démarrez un nouveau projet en utilisant les commandes suivantes**:  
+      
+1. **Démarrez un nouveau projet en utilisant les commandes suivantes**:  
     - ### `npm install -g create-react-app`
     - ### `npx creare-recat-app exercice789`
     - ### `cd exercice789`
     - ### `npm start`
-3. **(Optionnel) Clonez le projet initial pour votre référence** : Lien --> 
+2. **(Optionnel) Clonez le projet initial pour votre référence** : Lien --> 
 5. **Installation** :
    - Installez les dépendances nécessaires via npm.
    - Assurez-vous que `react-router-dom` est mis à jour à la version 6.
