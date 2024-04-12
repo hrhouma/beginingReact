@@ -41,10 +41,10 @@ Vous avez déjà travaillé sur une application qui récupère des informations 
     - Autre documentation optionelle (ateliers introduction react-router-dom + projets de restcountries): https://drive.google.com/drive/folders/1AEVUnc6X0h2ebLexpG3hQl6K2Wu2_I_Q?usp=sharing
     - Liens Github:
 2. **Démarrez un nouveau projet en utilisant les commandes suivantes**:  
-    - npm install -g create-react-app
-    - npx creare-recat-app exercice789
-    - cd exercice789
-    - npm start
+    - ### `npm install -g create-react-app`
+    - ### `npx creare-recat-app exercice789`
+    - ### `cd exercice789`
+    - ### `npm start`
 3. **(Optionnel) Clonez le projet initial pour votre référence** : Lien --> 
 5. **Installation** :
    - Installez les dépendances nécessaires via npm.
