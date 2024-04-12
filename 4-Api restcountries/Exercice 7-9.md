@@ -24,18 +24,17 @@ Vous avez déjà travaillé sur une application qui récupère des informations 
    - La page doit être accessible via la navigation de l'application et intégrée avec React Router.
 
 ### Consignes
-1. **Clonez le projet initial** (fournir le lien GitHub si applicable).
+1. **Clonez le projet initial** 
 2. **Installation** :
    - Installez les dépendances nécessaires via npm ou yarn.
    - Assurez-vous que `react-router-dom` est mis à jour à la version 6.
 3. **Développement** :
    - Ajoutez une nouvelle route pour votre nouvelle page utilisant le endpoint choisi.
    - Implémentez la logique pour fetcher les données de l'API et les afficher de manière appropriée sur la page.
-4. **Testing** :
-   - Testez votre application pour s'assurer que les nouvelles fonctionnalités fonctionnent correctement et que les routes sont correctement configurées.
 
 ### Livrables
-Soumettez votre code via un pull request sur le repository de classe. Assurez-vous d'inclure des captures d'écran de votre nouvelle fonctionnalité en action, ainsi qu'une brève description des défis rencontrés et comment vous les avez surmontés.
+- Soumettez votre code via un pull request sur le repository de classe (lien suivra). 
+- Assurez-vous d'inclure des captures d'écran de votre nouvelle fonctionnalité en action, ainsi qu'une brève description des défis rencontrés et comment vous les avez surmontés.
 
 ### Évaluation
 Votre travail sera évalué sur la base de :
