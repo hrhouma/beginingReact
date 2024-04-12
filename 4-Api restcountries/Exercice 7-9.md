@@ -33,7 +33,7 @@ Vous avez précédemment travaillé sur une application récupérant des informa
    - Installez les dépendances avec `npm install`
    - Lancez l'application avec `npm start`
 
-1.3.**Lien API v3** : [API REST Countries v3](https://restcountries.com/v3.1/alpha/{code})
+1.3.**Lien API v3** : [API REST Countries v3](https://restcountries.com/v3.1/)
 
 
 ## Exemples: 
@@ -43,7 +43,8 @@ Vous avez précédemment travaillé sur une application récupérant des informa
 # (À IGNORER) 2. Consultez les anciennes versions : 
 
 2.1. **(OPTIONNEL) Documentation de l'ancienne application Drapeau (old)  ( Restcountries version 2 et react-router-dom version 5):**
-    - https://docs.google.com/document/d/1iYxr2iEA3rqxVu-0mB2SNxY1Dt5jLnrw/edit?usp=sharing&ouid=114388549516551190899&rtpof=true&sd=true
+    - https://docs.google.com/document/d/1iYxr2iEA3rqxVu-0mB2SNxY1Dt5jLnrw/edit?usp=sharing&ouid=114388549516551190899&rtpof=true&sd=true 
+    
 2.2. **(OPTIONNEL) Lien Github :**
          - ### `git clone https://github.com/hrhouma/restcoun_react-router-dom5_api_2.git`
          - ### `cd restcoun_react-router-dom5_api_2`
@@ -54,8 +55,10 @@ Vous avez précédemment travaillé sur une application récupérant des informa
          - ### `npm start`
          ## ==> En cas d'erreurs encore
          - ### `npm audit fix --force` 
-         - ### `npm start`
-  2.3. **Lien API v2 :** 
+         - ### `npm start` 
+         
+  2.3. **Lien API v2 :** [API REST Countries v2](https://restcountries.eu/rest/v2/) 
+
 ## Exemples: 
 ![image](https://github.com/hrhouma/beginingReact/assets/10111526/a4f27890-ad39-42f5-9aa8-41b6fb09d665)
 ![image](https://github.com/hrhouma/beginingReact/assets/10111526/8a3bc7d0-1f56-49ed-8089-0f0d9f213e31)
