@@ -99,7 +99,7 @@ Assurez-vous que `react-router-dom` est mis à jour à la version 6 en le vérif
 Visitez [REST Countries](https://restcountries.com/) pour plus d'informations sur l'API.
 
 ## 5. Choix de l'endpoint
-Me renseigner votre choix d'endpoint à utiliser en utilisant ce lien [cette documentation](https://docs.google.com/document/d/1M28QPFBGTG0DcTDMMwoUiGDPSXKzzWRyCvOmZyW8Mvw/edit?usp=sharing).
+Me renseigner votre choix d'endpoint ==>  [Confirmez votre choix](https://docs.google.com/document/d/1M28QPFBGTG0DcTDMMwoUiGDPSXKzzWRyCvOmZyW8Mvw/edit?usp=sharing).
 
 ## 6. Développement :
 - Ajoutez une nouvelle route pour votre nouvelle page utilisant l'endpoint choisi.
