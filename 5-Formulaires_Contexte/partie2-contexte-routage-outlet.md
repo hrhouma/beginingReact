@@ -1,4 +1,6 @@
-Pour assurer une continuité pédagogique et détaillée à partir de l'application que nous avons commencée et intégrer les nouveaux concepts étape par étape, redéfinissons le processus en mettant l'accent sur la manière dont chaque partie s'intègre dans le projet global. Nous allons progressivement ajouter le contexte et le routage, en veillant à ce que chaque étape soit claire et que le projet reste cohérent.
+# Partie2- Ajout du contexte, routage et outlet : 
+
+Nous allons progressivement ajouter le contexte et le routage, en veillant à ce que chaque étape soit claire et que le projet reste cohérent.
 
 ### 1. Récapitulation de la Base
 
