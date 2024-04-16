@@ -46,27 +46,18 @@ Ce cours peut être adapté pour des séances en ligne, des ateliers en personne
 ---
 # Partie1 - création de l'application , ajout des filtres et de la pagination: 
 
-Nous allons développer une application simple qui affiche une liste de produits avec la capacité de filtrer ces produits et de les paginer.
+Voici un cours structuré sur les variables calculées, les filtres et la pagination dans une application React, avec des exemples de code pour chacun de ces aspects.
 
-### 1. Introduction à l'Application
+### 1. **Objectifs du Cours**
+Ce cours vise à apprendre à:
+- Utiliser des variables calculées pour optimiser les performances.
+- Appliquer des filtres pour améliorer l'expérience utilisateur.
+- Implémenter la pagination pour gérer de grandes quantités de données.
 
-- Imaginons que nous développons une petite application de boutique en ligne qui affiche une liste de produits. 
-- Les utilisateurs peuvent filtrer les produits par catégorie et paginer les résultats pour faciliter la navigation.
+### 2. **Variables Calculées avec `useMemo`**
+Les variables calculées, ou "computed properties", permettent de recalculer des valeurs uniquement lorsque certaines dépendances changent, réduisant ainsi les opérations coûteuses.
 
-### 2. Configuration Initiale
-
-Pour commencer, assurez-vous d'avoir créé un projet React :
-
-```bash
-npx create-react-app react-filters-pagination
-cd react-filters-pagination
-```
-
-### 3. Variables Calculées avec `useMemo`
-
-- Utilisons `useMemo` pour calculer une liste filtrée de produits basée sur la catégorie sélectionnée par l'utilisateur. 
-- Ceci est un exemple typique d'une variable calculée.
-
+**Exemple :**
 ```jsx
 import React, { useState, useMemo } from 'react';
 
@@ -90,10 +81,18 @@ const ProductList = ({ products }) => {
 };
 ```
 
-### 4. Pagination des Données
+### 3. **Filtres**
+Le filtrage est une fonction essentielle dans les applications qui traitent des collections d'objets, permettant aux utilisateurs de trouver rapidement ce qu'ils recherchent.
 
-Pour la pagination, nous divisons la liste des produits en plusieurs pages. Nous utiliserons `useState` pour garder la trace de la page actuelle.
+**Exemple :**
+```jsx
+// Utilisation du composant ProductList défini ci-dessus pour filtrer les produits par catégorie.
+```
 
+### 4. **Pagination des Données**
+La pagination est une technique qui consiste à diviser les données en pages, ce qui réduit le temps de chargement et améliore l'expérience utilisateur en ne montrant qu'une petite partie des données à la fois.
+
+**Exemple :**
 ```jsx
 import React, { useState } from 'react';
 
@@ -125,10 +124,10 @@ const PaginatedProducts = ({ products, itemsPerPage }) => {
 };
 ```
 
-### 5. Intégration dans l'App
+### 5. **Intégration dans l'App**
+Combinons les concepts de variables calculées, filtres et pagination dans notre application principale pour démontrer leur utilité ensemble.
 
-Enfin, combinons les filtres et la pagination dans notre application principale.
-
+**Exemple :**
 ```jsx
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -146,7 +145,7 @@ const App = () => {
   return (
     <div>
       <ProductList products={products} />
-      <PaginatedProducts products={products} itemsPerPage={10} />
+      <PaginatedProducts products={products, itemsPerPage=10} />
     </div>
   );
 };
@@ -154,3 +153,118 @@ const App = () => {
 ReactDOM.render(<App />, document.getElementById('root'));
 ```
 
+### Conclusion
+Ce cours démontre comment utiliser efficacement les variables calculées, les filtres et la pagination pour créer des applications React robustes et performantes. Ces techniques sont cruciales pour manipuler et présenter efficacement de grandes quantités de données dans les applications web modernes.
+
+-----------------
+# Partie 2 - Contexte React + Outlet
+
+### Cours sur le Contexte React et le Routage avec Contenu Partagé
+
+#### 6. **Objectifs du Module**
+Ce module explore le Contexte React et le routage avec contenu partagé, en se concentrant sur :
+- La création et la consommation de contexte pour partager des données à travers l'application.
+- L'utilisation du routage pour naviguer entre les pages tout en partageant du contenu via `Outlet`.
+
+#### 7. **Le Contexte React**
+Le Contexte React est un moyen efficace de partager des données entre composants sans passer explicitement des props à chaque niveau de l'arborescence.
+
+**Pourquoi utiliser le Contexte React ?**
+- Pour éviter le "prop-drilling" où les données sont passées de parent en enfant à travers plusieurs niveaux.
+- Pour partager des états globaux comme les préférences utilisateurs, le thème, ou les informations d'authentification.
+
+**Comment créer et consommer un contexte ?**
+
+**Exemple de Création :**
+```jsx
+import React, { createContext, useContext, useState } from 'react';
+
+// Création du Contexte
+const ProductContext = createContext();
+
+// Provider du contexte
+const ProductProvider = ({ children }) => {
+  const [products, setProducts] = useState([]);
+
+  return (
+    <ProductContext.Provider value={{ products, setProducts }}>
+      {children}
+    </ProductContext.Provider>
+  );
+};
+
+export { ProductContext, ProductProvider };
+```
+
+**Exemple de Consommation :**
+```jsx
+import React, { useContext } from 'react';
+import { ProductContext } from './ProductContext';
+
+const ProductList = () => {
+  const { products } = useContext(ProductContext);
+
+  return (
+    <ul>
+      {products.map(product => (
+        <li key={product.id}>{product.name} - ${product.price}</li>
+      ))}
+    </ul>
+  );
+};
+```
+
+#### 8. **Routage avec Contenu Partagé**
+Le routage dans les applications React permet de naviguer entre différentes vues. L'`Outlet` de `react-router-dom` est utilisé pour rendre des composants enfants dans une mise en page commune.
+
+**Pourquoi utiliser le Routage avec `Outlet` ?**
+- Pour structurer l'application en différentes pages sans recharger la page.
+- Pour maintenir une mise en page constante tout en changeant le contenu spécifique à une route.
+
+**Comment intégrer le Routage avec `Outlet` ?**
+
+**Exemple :**
+```jsx
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { ProductProvider } from './ProductContext';
+import ProductList from './ProductList';
+import Home from './Home';
+import Navbar from './Navbar';
+
+const App = () => {
+  return (
+    <Router>
+      <ProductProvider>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />}>
+            <Route path="products" element={<ProductList />} />
+            {/* Outlet sera utilisé ici pour rendre 'ProductList' sous 'Home' */}
+          </Route>
+        </Routes>
+      </ProductProvider>
+    </Router>
+  );
+};
+
+export default App;
+```
+
+**Home Component avec `Outlet` :**
+```jsx
+import React from 'react';
+import { Outlet } from 'react-router-dom';
+
+const Home = () => {
+  return (
+    <div>
+      <h1>Welcome to Our Store</h1>
+      <Outlet /> {/* Ici, l'Outlet rendra 'ProductList' selon la route active */}
+    </div>
+  );
+};
+```
+
+### Conclusion
+Dans ce module, nous avons appris comment utiliser le Contexte React pour gérer l'état global et comment intégrer le routage dans une application React pour créer des applications web modernes et interactives. Les concepts d'`Outlet` et de contexte sont essentiels pour des applications évolutives et maintenables.
