@@ -1,4 +1,11 @@
-Pour continuer le développement de notre application React, intégrons maintenant des fonctionnalités liées à la gestion des formulaires, notamment la création, la validation, l'accessibilité, ainsi que la gestion des données de formulaire avec `useState` et l'utilisation de `useParams` pour le routage. Nous nous concentrerons sur un formulaire de recherche qui permet aux utilisateurs de filtrer les produits par catégorie, en améliorant notre gestion actuelle du filtre.
+# Partie 3 - Validation et accessibilité + formulaires
+
+## Concepts: 
+- Gérer les données des formulaires à l'aide de useState Contenu 
+- useParam()
+
+- Pour continuer le développement de notre application React, intégrons maintenant des fonctionnalités liées à la gestion des formulaires, notamment la création, la validation, l'accessibilité, ainsi que la gestion des données de formulaire avec `useState` et l'utilisation de `useParams` pour le routage. 
+- Nous nous concentrerons sur un formulaire de recherche qui permet aux utilisateurs de filtrer les produits par catégorie, en améliorant notre gestion actuelle du filtre.
 
 ### Étape 1 : Création du Formulaire de Recherche
 
