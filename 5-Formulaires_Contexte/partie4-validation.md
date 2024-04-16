@@ -1,5 +1,7 @@
+# Partie4- amélioration de la validation : 
 
-Pour continuer à développer notre projet React en mettant l'accent sur la pédagogie et en améliorant la validation des formulaires de manière compréhensible pour un débutant, nous allons approfondir ces aspects tout en préservant la continuité du travail précédent. Voici comment nous allons procéder :
+- Pour continuer à développer notre projet React en mettant l'accent sur la pédagogie et en améliorant la validation des formulaires de manière compréhensible pour un débutant, nous allons approfondir ces aspects tout en préservant la continuité du travail précédent. 
+- Voici comment nous allons procéder :
 
 ### Étape 1 : Amélioration de la Validation du Formulaire
 
