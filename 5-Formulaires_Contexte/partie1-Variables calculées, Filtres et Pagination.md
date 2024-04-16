@@ -21,7 +21,7 @@ react-filters-pagination/
 
 ### 2. Développement des Composants
 
-**FilterInput.js** :
+# FilterInput.js :
 Ce composant gérera l'input utilisateur pour filtrer les produits.
 
 ```jsx
@@ -41,7 +41,7 @@ const FilterInput = ({ filter, setFilter }) => {
 export default FilterInput;
 ```
 
-**ProductList.js** :
+# ProductList.js :
 Ce composant affichera la liste des produits filtrés et paginés.
 
 ```jsx
@@ -60,7 +60,7 @@ const ProductList = ({ products }) => {
 export default ProductList;
 ```
 
-**PaginatedProducts.js** :
+# PaginatedProducts.js :
 Ce composant s'occupera de la pagination des produits.
 
 ```jsx
@@ -93,7 +93,7 @@ const PaginatedProducts = ({ products, itemsPerPage }) => {
 export default PaginatedProducts;
 ```
 
-**App.js** :
+# App.js :
 Le composant principal qui intègre tout.
 
 ```jsx
