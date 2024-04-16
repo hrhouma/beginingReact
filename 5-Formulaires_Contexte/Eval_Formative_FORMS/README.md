@@ -1,4 +1,4 @@
-# 1 - Illusrez la différence entre version 1 et version 2 refactorisée !
+# 1 - Ex01 : Illusrez la différence entre version 1 et version 2 refactorisée !
 
 Voici une illustration des différences entre la version 1 et la version 2 du code :
 
@@ -19,7 +19,7 @@ Voici une illustration des différences entre la version 1 et la version 2 du co
 
 En résumé, la version 2 représente une amélioration significative de la structure, de la réutilisabilité, de la maintenance et de la robustesse du code par rapport à la version 1.
 
-# 2 - Votre tâche ! La version 3 !!!!
+# 2 - Ex02 - Votre tâche ! La version 3 !!!!
 
 **Évaluation pour la Version 3 du Projet :**
 
