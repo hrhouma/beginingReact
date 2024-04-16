@@ -1,3 +1,4 @@
+# Partie 8 : intégration des paiements : 
 Intégrer Stripe pour les paiements dans votre projet React `react-filters-pagination` est une excellente façon d'élargir les capacités de l'application et d'apprendre à gérer les transactions financières. Pour une intégration pédagogique et détaillée, nous allons procéder par étapes, en expliquant chaque partie pour faciliter la compréhension.
 
 ### Étape 1 : Installation des Dépendances
