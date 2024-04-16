@@ -1,3 +1,5 @@
+# Partie6- Résumé des autres états - useMemo - react-router-dom - Formulaires et Validation et Accessibilité :
+
 ### Résumé des Concepts Appris
 
 Dans ce projet React, nous avons abordé plusieurs concepts clés pour développer des applications web modernes et réactives. Voici un résumé des compétences et des concepts intégrés dans notre application :
