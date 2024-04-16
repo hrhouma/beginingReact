@@ -1,11 +1,8 @@
-# 1 - Pratique  1
-
- - Pour transformer l'exemple en une application React plus réaliste avec une structure de projet bien organisée, nous allons mettre en place des composants distincts pour le filtrage, la pagination, et la liste des produits. 
-- Voici comment vous pouvez organiser et développer chaque partie de l'application :
+# 1 - Pratique  1 - Variables calculées, Filtres et Pagination
 
 ### 1. Structure du Projet
 
-Voici une suggestion de structure pour votre projet :
+Voici la structure de votre projet :
 
 ```
 react-filters-pagination/
