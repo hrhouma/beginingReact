@@ -1,3 +1,5 @@
+# partie5- Résumé des concepts Le Contexte React + Routage avec Contenu Partagé: 
+
 Pour assurer une compréhension complète, revoyons comment les concepts de **contexte React**, la **création et consommation de contexte**, ainsi que le **routage avec contenu partagé** ont été illustrés dans votre projet. Nous allons aussi vérifier l'utilisation de `useContext()` pour s'assurer que tous les concepts listés ont été correctement intégrés et expliqués.
 
 ### 1. Le Contexte React (Création et Consommation de Contexte)
