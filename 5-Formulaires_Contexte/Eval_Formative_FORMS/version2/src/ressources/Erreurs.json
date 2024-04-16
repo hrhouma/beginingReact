@@ -1,0 +1,13 @@
+{
+    "genre": "Genre requis!",
+    "nom": "Nom requis!", 
+    "prenom": "Prénom requis!",
+    "naissance": "Date de naissance requise!",
+    "ville": "Ville de naîssance requise!",
+    "pays": "Pays de naissance requise!",
+    "nationalite": "Nationalité requise!",
+    "passeport": "Numéro de passeport requis!",
+    "paysAvant": "Pays ayant livré le passeport requis!",
+    "datePasseport": "Date de délivrance du passeport requise!",
+    "dateExpiration": "Date d'expiration du passeport requise!"
+}

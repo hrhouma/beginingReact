@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  text-align: center;
+  padding: 1em;
+}
+
+code {
+  font-family: monospace;
+}
+
+
+h2 {
+  padding: .5em;
+}
+
+h4 {
+  margin: 0;
+}
+
+.formulaire {
+  padding: 1em;
+  width: 60%;
+  margin: auto;
+  background-color: grey;
+}
+
+.labels {
+  margin-right: 1em;
+  width: 25%;
+  display: inline-block;
+  text-align: right;
+}
+.inputs {
+  width: 50%;
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+.buttons {
+  margin-left: 1em;
+  width: 20%;
+  display: inline-block;
+}
+
+table, th, td{
+    border: solid black 1px;
+}
+
+th, td{
+    text-align: left;
+    padding: 10px;
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th{
+    background-color: gainsboro;
+}
+
+hr {
+  width: 60%;
+}
+
+label {
+  margin-right: 7em;
+}

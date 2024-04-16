@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  text-align: center;
+  padding: 1em;
+}
+
+code {
+  font-family: monospace;
+}
+
+
+h2, h4 {
+  padding: .5em;
+}
+
+.formulaire {
+  padding: 1em;
+  width: 60%;
+  margin: auto;
+  background-color: grey;
+}
+
+.labels {
+  margin-right: 1em;
+  width: 30%;
+  display: inline-block;
+  text-align: right;
+}
+.inputs {
+  width: 50%;
+  display: inline-block;
+  text-align: left;
+}
+.buttons {
+  margin-left: 1em;
+  width: 15%;
+  display: inline-block;
+}
+
+table, th, td{
+    border: solid black 1px;
+}
+
+th, td{
+    text-align: left;
+    padding: 10px;
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th{
+    background-color: gainsboro;
+}
