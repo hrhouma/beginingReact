@@ -216,7 +216,7 @@ En résumé, ce composant `PaginatedProducts` permet d'afficher une liste de pro
 
 - Modifiez la liste products
 
-
+```bash
 const products = [
   { id: 1, name: 'Laptop', category: 'Electronics', price: 999 },
   { id: 2, name: 'Coffee Maker', category: 'Home Appliance', price: 250 },
@@ -325,5 +325,5 @@ products.push(
 ];
 
 console.log(products);
-
+```
 
