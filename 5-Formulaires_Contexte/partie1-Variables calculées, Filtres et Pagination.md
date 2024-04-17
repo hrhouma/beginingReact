@@ -186,7 +186,18 @@ Le code définit un composant `PaginatedProducts` qui prend deux props : `produc
      currentPage * itemsPerPage
    );
    ```
-   Cette ligne extrait les produits à afficher sur la page actuelle en utilisant la méthode `slice()` sur le tableau `products`. Elle calcule les indices de début et de fin en fonction de la page actuelle et du nombre d'articles par page.
+- Cette ligne extrait les produits à afficher sur la page actuelle en utilisant la méthode `slice()` sur le tableau `products`. Elle calcule les indices de début et de fin en fonction de la page actuelle et du nombre d'articles par page.
+- Cette fonction utilise la méthode `slice()` sur le tableau `products` pour extraire une portion de ce tableau, correspondant à la page actuelle de résultats.
+
+Voici comment elle fonctionne :
+
+1. `(currentPage - 1) * itemsPerPage`: Cette partie calcule l'index de départ à partir duquel extraire les éléments. `currentPage` représente le numéro de la page actuelle, et `itemsPerPage` représente le nombre d'éléments à afficher par page. En soustrayant 1 de `currentPage` et en multipliant par `itemsPerPage`, on obtient l'index de départ de la page actuelle.
+
+2. `currentPage * itemsPerPage`: Cette partie calcule l'index de fin jusqu'auquel extraire les éléments. En multipliant `currentPage` par `itemsPerPage`, on obtient l'index de fin de la page actuelle.
+
+3. `products.slice()`: C'est la méthode `slice()` qui est appliquée sur le tableau `products`. Elle prend deux arguments : l'index de début et l'index de fin. Ces arguments déterminent la portion du tableau à extraire.
+
+En combinant ces trois étapes, `currentProducts` contient une sous-section du tableau `products`, correspondant à la page actuelle de résultats, en fonction du numéro de page (`currentPage`) et du nombre d'éléments par page (`itemsPerPage`).
 
 6. **Rendu du composant** :
    ```javascript
