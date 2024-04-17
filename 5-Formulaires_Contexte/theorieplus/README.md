@@ -1,6 +1,6 @@
 # Outlet
 
-Le composant `<Outlet>` de React Router est utilisé pour rendre des composants enfants dans une application. Il agit comme un point de rendu, indiquant où les composants enfants spécifiés dans la configuration des routes doivent être affichés. Voici une explication plus simple :
+Le composant `<Outlet>` de React Router est utilisé pour rendre des composants enfants dans une application. Il agit comme un point de rendu, indiquant où les composants enfants spécifiés dans la configuration des routes doivent être affichés. 
 
 ### Fonctionnement de `<Outlet>`
 Imaginons que vous ayez une application avec plusieurs pages : une page d'accueil, une page de contact, etc. Vous configurez vos routes pour définir quel composant doit être chargé pour chaque chemin (url). Le composant `<Outlet>` est placé dans un composant parent et sert de placeholder, c'est-à-dire un emplacement réservé où React Router va afficher le composant approprié selon la route actuelle.
