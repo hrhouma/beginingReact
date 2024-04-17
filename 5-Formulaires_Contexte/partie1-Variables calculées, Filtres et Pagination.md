@@ -11,7 +11,6 @@ react-filters-pagination/
 │   │   ├── FilterInput.js
 │   │   ├── PaginatedProducts.js
 │   │   ├── ProductList.js
-│   │   └── index.js
 │   ├── App.js
 │   └── index.js
 ├── public/
