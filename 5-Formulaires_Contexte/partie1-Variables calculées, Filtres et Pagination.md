@@ -136,7 +136,7 @@ npm start
 ```
 
 
-# Explications supplémentaires 
+# Explications supplémentaires de PaginatedProducts.js :
 
 
 
