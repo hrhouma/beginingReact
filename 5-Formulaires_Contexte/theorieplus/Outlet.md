@@ -1,4 +1,4 @@
-# Outlet
+# 1 - Outlet
 
 Le composant `<Outlet>` de React Router est utilisé pour rendre des composants enfants dans une application. Il agit comme un point de rendu, indiquant où les composants enfants spécifiés dans la configuration des routes doivent être affichés. 
 
@@ -41,7 +41,7 @@ function Layout() {
 
 C'est un concept très utile pour structurer des applications web de manière plus modulaire et claire en utilisant React Router.
 
-# Exemple complet à implémenter étape par étape : 
+# 2 - Exemple complet à implémenter étape par étape : 
 
 - Voici un exemple complet d'une application React utilisant React Router avec le composant `<Outlet>`.
 - L'application inclut une barre de navigation, un pied de page et trois pages différentes : une page d'accueil, une page "À propos" et une page de contact.
@@ -168,7 +168,7 @@ Les autres pages peuvent être structurées de manière similaire, en changeant 
 
 Dans cet exemple, l'application utilise un `Router` pour envelopper l'ensemble de l'application, permettant ainsi la navigation entre différentes routes. Le composant `Layout` agit comme un container pour les composants spécifiques aux routes, qui sont chargés dynamiquement dans l'`<Outlet>` en fonction de l'URL. Cela rend l'application très modulaire, chaque page pouvant être développée de manière indépendante sans affecter le layout global.
 
-# Exercice : 
+# 2 - Exercice : 
 - Implémentez l'exemple ci-haut et tester !
 - Testez 
 # Manipulation 
@@ -202,7 +202,7 @@ Dans cet exemple, l'application utilise un `Router` pour envelopper l'ensemble d
 
 Dans ce scénario, `<Outlet>` ne "appelle" pas directement d'autres composants. Il définit simplement un emplacement où React Router doit insérer le composant de la route active. En cliquant sur "Home Page", `<Outlet>` est utilisé pour déterminer l'emplacement de rendu de `HomePage` à l'intérieur de la structure générale du `Layout`. Cela permet de garder la même structure de page tout en changeant dynamiquement le contenu central selon la navigation de l'utilisateur.
 
-# Encore pas claire ?
+# 3 - Encore pas claire ?
 
 
 ### Explication du fonctionnement des routes imbriquées
