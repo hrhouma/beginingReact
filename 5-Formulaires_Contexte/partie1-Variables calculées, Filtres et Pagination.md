@@ -229,11 +229,7 @@ const products = [
   { id: 9, name: 'Microwave Oven', category: 'Home Appliance', price: 150 },
   { id: 10, name: 'Air Fryer', category: 'Home Appliance', price: 100 },
   { id: 11, name: 'Self-Help Book', category: 'Books', price: 30 },
-  { id: 12, name: 'Mystery Novel', category: 'Books', price: 40 }
-];
-
-// Continuer jusqu'à l'ID 100
-products.push(
+  { id: 12, name: 'Mystery Novel', category: 'Books', price: 40 },
   { id: 13, name: 'Product 13', category: 'Electronics', price: 55 },
   { id: 14, name: 'Product 14', category: 'Home Appliance', price: 60 },
   { id: 15, name: 'Product 15', category: 'Books', price: 70 },
@@ -324,6 +320,5 @@ products.push(
   { id: 100, name: 'Product 100', category: 'Electronics', price: 920 }
 ];
 
-console.log(products);
 ```
 
