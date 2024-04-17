@@ -110,18 +110,20 @@ const products = [
 ];
 
 const App = () => {
-  const [filter, setFilter] = useState('');
-  const filteredProducts = products.filter(product => product.category.toLowerCase().includes(filter.toLowerCase()));
+  const [searchTerm, setSearchTerm] = useState('');
+  const filteredProducts = products.filter(product => product.category.toLowerCase().includes(searchTerm.toLowerCase()));
 
   return (
     <div>
-      <FilterInput filter={filter} setFilter={setFilter} />
+      <FilterInput filter={searchTerm} setFilter={setSearchTerm} />
       <PaginatedProducts products={filteredProducts} itemsPerPage={5} />
     </div>
   );
 };
 
+
 export default App;
+
 
 ```
 
