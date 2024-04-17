@@ -201,3 +201,45 @@ Dans cet exemple, l'application utilise un `Router` pour envelopper l'ensemble d
 ### Conclusion
 
 Dans ce scénario, `<Outlet>` ne "appelle" pas directement d'autres composants. Il définit simplement un emplacement où React Router doit insérer le composant de la route active. En cliquant sur "Home Page", `<Outlet>` est utilisé pour déterminer l'emplacement de rendu de `HomePage` à l'intérieur de la structure générale du `Layout`. Cela permet de garder la même structure de page tout en changeant dynamiquement le contenu central selon la navigation de l'utilisateur.
+
+# Encore pas claire ?
+
+
+### Explication du fonctionnement des routes imbriquées
+
+Dans votre configuration de routes :
+
+```jsx
+<Routes>
+  <Route path="/" element={<Layout />}>
+    <Route index element={<HomePage />} />
+    <Route path="about" element={<AboutPage />} />
+    <Route path="contact" element={<ContactPage />} />
+  </Route>
+</Routes>
+```
+
+- **`<Route path="/" element={<Layout />}>`** :
+  - Cette route définit que pour l'URL de base (`/`), le composant `Layout` doit être rendu. `Layout` agit comme un cadre pour les pages spécifiques qui seront chargées à l'intérieur de ce cadre.
+  - `<Layout />` inclut le composant `<Outlet>`, qui est l'emplacement où le contenu des sous-routes sera rendu.
+
+- **Les sous-routes de `/`** :
+  - **`<Route index element={<HomePage />} />`** : Cela signifie que si l'URL est exactement `/`, alors `HomePage` sera rendu à l'emplacement du `<Outlet>` dans `Layout`.
+  - **`<Route path="about" element={<AboutPage />} />`** : Si l'URL est `/about`, alors `AboutPage` sera rendu dans l'`<Outlet>` de `Layout`.
+  - **`<Route path="contact" element={<ContactPage />} />`** : Si l'URL est `/contact`, alors `ContactPage` sera rendu dans l'`<Outlet>` de `Layout`.
+
+### Comment les composants sont-ils rendus ?
+
+- **Seul le composant correspondant à la route active est rendu dans l'`<Outlet>`**. Les autres composants (ceux non sélectionnés par l'URL courante) ne sont pas rendus. Cela signifie que si vous êtes sur `/`, seul `HomePage` apparaît dans l'`<Outlet>`. Si vous changez l'URL pour `/about`, `HomePage` disparaît et `AboutPage` est rendu à la place dans l'`<Outlet>`.
+
+- **`Layout` est toujours présent** : Comme `Layout` est lié à la route `/` et toutes les sous-routes sont imbriquées à l'intérieur de cette route, `Layout` reste toujours rendu, agissant comme un conteneur pour les différents composants qui changent selon l'URL.
+
+### Illustration pratique
+
+Imaginons que vous naviguez vers `/about` :
+
+1. **React Router rend `Layout`** car il est attaché à la route `/`.
+2. **À l'intérieur de `Layout`, l'`<Outlet>` rend `AboutPage`** parce que l'URL correspond à `/about`.
+3. **`Navbar` et `Footer` restent constants** car ils sont définis à l'extérieur des `<Routes>` et donc indépendants des changements de route.
+
+Ainsi, React Router ne rend jamais plus d'une page à la fois dans l'`<Outlet>`; il choisit le composant spécifique à la route qui correspond à l'URL actuelle et le place dans l'`<Outlet>` de `Layout`.
