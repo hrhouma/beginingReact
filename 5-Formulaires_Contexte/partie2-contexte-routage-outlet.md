@@ -102,7 +102,7 @@ const App = () => {
   );
 };
 
-ReactDOM.render(<App />, document.getElementById('root'));
+export default App;
 ```
 
 **3.3 Utilisation d'Outlet pour le Routage Dynamique**
