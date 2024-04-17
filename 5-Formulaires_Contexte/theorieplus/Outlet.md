@@ -168,3 +168,36 @@ Les autres pages peuvent être structurées de manière similaire, en changeant 
 
 Dans cet exemple, l'application utilise un `Router` pour envelopper l'ensemble de l'application, permettant ainsi la navigation entre différentes routes. Le composant `Layout` agit comme un container pour les composants spécifiques aux routes, qui sont chargés dynamiquement dans l'`<Outlet>` en fonction de l'URL. Cela rend l'application très modulaire, chaque page pouvant être développée de manière indépendante sans affecter le layout global.
 
+# Exercice : 
+- Implémentez l'exemple ci-haut et tester !
+- Testez 
+# Manipulation 
+
+### Scénario : Cliquer sur "Home Page"
+
+1. **Navigation initiale** :
+   - Vous ouvrez l'application et le navigateur charge l'URL racine (`/`).
+
+2. **Chargement du `Router` et des composants** :
+   - Le composant `App` est le point d'entrée de l'application React. Il utilise `BrowserRouter` (ici alias `Router`) pour envelopper les autres composants, ce qui permet la gestion des routes.
+   - Le composant `Navbar` est rendu. Il contient des liens (`Link`) qui vous permettent de naviguer vers différentes parties de l'application sans recharger la page.
+
+3. **Routage vers la Home Page** :
+   - En cliquant sur le lien "Accueil" dans `Navbar`, React Router change l'URL pour `/` (la racine) sans recharger la page. La navigation est gérée de manière interne par React Router.
+   - Le routeur regarde alors ses `<Routes>` pour déterminer quel composant doit être rendu en fonction de l'URL courante.
+
+4. **Rendu de `Layout` et activation de `<Outlet>`** :
+   - Le `<Route>` pour `/` est configuré pour utiliser le composant `Layout` comme élément principal (`element={<Layout />}`).
+   - Lorsque `Layout` est rendu, il inclut le composant `<Outlet>` à l'intérieur de sa structure (par exemple, entre le contenu supplémentaire, des bannières, etc., si nécessaire).
+   - `<Outlet>` agit ici comme un emplacement réservé. React Router regarde ensuite les sous-routes de `/` pour déterminer quel composant enfant doit être rendu à cet endroit.
+
+5. **Chargement du composant de la page d'accueil** :
+   - Sous `Layout`, la route index (`<Route index element={<HomePage />} />`) est activée car l'URL correspond à `/`. React Router injecte alors `HomePage` à l'endroit où se trouve `<Outlet>` dans `Layout`.
+   - `HomePage` est rendu dans `Layout`, remplaçant l'ancien contenu de `<Outlet>`, si présent. Vous voyez maintenant le contenu de `HomePage`, qui inclut un titre et un message de bienvenue.
+
+6. **Rendu constant de `Navbar` et `Footer`** :
+   - Pendant toute cette navigation, les composants `Navbar` et `Footer` restent visibles, car ils sont placés hors du `<Routes>` et ne sont pas affectés par les changements d'URL. Ils sont rendus une seule fois et restent statiques en haut et en bas de la page, respectivement.
+
+### Conclusion
+
+Dans ce scénario, `<Outlet>` ne "appelle" pas directement d'autres composants. Il définit simplement un emplacement où React Router doit insérer le composant de la route active. En cliquant sur "Home Page", `<Outlet>` est utilisé pour déterminer l'emplacement de rendu de `HomePage` à l'intérieur de la structure générale du `Layout`. Cela permet de garder la même structure de page tout en changeant dynamiquement le contenu central selon la navigation de l'utilisateur.
