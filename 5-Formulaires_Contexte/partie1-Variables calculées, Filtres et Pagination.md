@@ -207,3 +207,7 @@ Le code définit un composant `PaginatedProducts` qui prend deux props : `produc
 
 En résumé, ce composant `PaginatedProducts` permet d'afficher une liste de produits de manière paginée, avec un nombre configurable d'articles par page, et fournit des boutons de navigation pour passer d'une page à l'autre.
 
+
+# Évaluation formative :
+
+- Ajoutez plusieurs produits et observer le comportement de la navigation. Ajoutez plsueiurs produits par catégorie . Y-a-il d'autres boutons ajoutés ? et combien d'items sont-ils affichés par page ?
