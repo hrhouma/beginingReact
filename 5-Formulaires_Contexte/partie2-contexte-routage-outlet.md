@@ -63,7 +63,7 @@ const App = () => {
   );
 };
 
-ReactDOM.render(<App />, document.getElementById('root'));
+export default App;
 ```
 
 ### 3. Intégration du Routage
