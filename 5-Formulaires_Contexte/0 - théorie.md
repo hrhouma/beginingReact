@@ -32,16 +32,6 @@
   - Utilisation de bibliothèques comme `react-paginate` pour implémenter facilement la pagination.
   - Exemple de pagination côté client avec des hooks comme `useState` et `useEffect`.
 
-### 5. Conclusion et Projet de Fin de Cours
-
-- **Récapitulatif des Concepts Appris** : Révision des principaux enseignements et compétences acquises.
-- **Projet de Fin de Cours** : Développement d'une application utilisant des variables calculées, des filtres, et la pagination. Ce projet permettra de consolider les compétences apprises et de montrer comment ces éléments peuvent être intégrés de manière cohérente dans une application React.
-
-### Matériaux Complémentaires
-
-- Fournir des lectures supplémentaires, des tutoriels vidéo, et des ressources en ligne pour que les étudiants puissent approfondir leurs connaissances à leur propre rythme.
-
-Ce cours peut être adapté pour des séances en ligne, des ateliers en personne, ou même des formats de vidéo à la demande, en fonction des besoins des apprenants et des ressources disponibles.
 
 ---
 # Partie1 - création de l'application , ajout des filtres et de la pagination: 
