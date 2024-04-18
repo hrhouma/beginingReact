@@ -55,7 +55,8 @@ En règle générale, pour des applications d'entreprise ou des services qui gè
 Il n'y a pas de réponse unique qui convienne à tous les scénarios. Analysez les besoins spécifiques de votre application, l'expérience utilisateur que vous souhaitez offrir, et les contraintes techniques avant de décider. Si possible, tester les deux approches dans un environnement de développement pour voir quel impact elles ont sur la performance et l'expérience utilisateur peut aussi être très instructif.
 
 # 3 - Encore pas claire ? faire ses courses au supermarché ou chercher quelque chose dans son frigo ?
-
+## Faire ses courses au supermarché 2 ou 3 fois par semaine ? ou faire ses courses au supermarché une seule fois par semaine ?
+#### 😧 ça dépend si je dispose d'un véhicule rapide ? Faire mes courses une fois par semaine prendra probablement toute la journée !
 
 Imaginons deux exemples simplifiés pour mieux comprendre la différence entre la pagination côté serveur et côté client, en utilisant des métaphores du quotidien : aller faire ses courses au supermarché (côté serveur) et chercher quelque chose dans son frigo (côté client).
 
