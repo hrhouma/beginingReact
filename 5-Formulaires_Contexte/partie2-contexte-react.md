@@ -1,4 +1,4 @@
-# Partie2- Contexte React
+# Partie3- Contexte React
 ## Application React avec Contextes Multiples
 
 Cette application est un exemple simple conçu pour illustrer l'utilisation de plusieurs contextes dans une application React. Nous avons deux contextes : `SearchContext` pour la gestion de la recherche de produits et `ThemeContext` pour la gestion des thèmes de l'application.
