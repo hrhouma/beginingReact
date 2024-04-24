@@ -147,6 +147,7 @@ export default Footer;
 
 Ces fichiers contiennent les composants spécifiques à chaque page. Voici un exemple pour `HomePage.js` :
 
+#### `HomePage.js`
 ```jsx
 import React from 'react';
 
@@ -164,6 +165,36 @@ export default HomePage;
 
 Les autres pages peuvent être structurées de manière similaire, en changeant le contenu spécifique à chaque page.
 
+#### `ContactPage.js`
+```jsx
+import React from 'react';
+
+function ContactPage() {
+  return (
+    <div>
+      <h1>Page d'Accueil</h1>
+      <p>Bienvenue sur notre site web!</p>
+    </div>
+  );
+}
+
+export default ContactPage;
+```
+#### `AboutPage.js`
+```jsx
+import React from 'react';
+
+function AboutPage() {
+  return (
+    <div>
+      <h1>Page About Page</h1>
+      <p>Bienvenue sur notre site web!</p>
+    </div>
+  );
+}
+
+export default AboutPage;
+```
 ### Explication
 
 Dans cet exemple, l'application utilise un `Router` pour envelopper l'ensemble de l'application, permettant ainsi la navigation entre différentes routes. Le composant `Layout` agit comme un container pour les composants spécifiques aux routes, qui sont chargés dynamiquement dans l'`<Outlet>` en fonction de l'URL. Cela rend l'application très modulaire, chaque page pouvant être développée de manière indépendante sans affecter le layout global.
