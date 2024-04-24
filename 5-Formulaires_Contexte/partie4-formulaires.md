@@ -1,5 +1,6 @@
 # Partie 4 - Guide des formulaires React
 
+# 1 - Création du formulaire : 
 - Les formulaires sont un aspect essentiel du développement web, et React offre des fonctionnalités puissantes pour les gérer de manière efficace. 
 - Ce guide vous aidera à comprendre comment créer et gérer des formulaires dans vos applications React.
 
@@ -107,4 +108,154 @@ En résumé, la fonction `handleChange` est utilisée pour mettre à jour dynami
 
 - La validation des formulaires est une étape importante pour s'assurer que les données saisies par l'utilisateur sont correctes. 
 - Vous pouvez valider les données du formulaire en ajoutant des conditions dans `handleSubmit` ou en utilisant des bibliothèques de validation tierces telles que `formik` ou `yup`.
-==> Sujet de la partie suivante ! 
+==> Sujet de la partie suivante !
+
+Bien sûr, voici l'énoncé pour l'exercice :
+
+
+
+# 2 - Exercice formatif : Refactoriser un formulaire avec Semantic UI React
+
+**Objectif :** Le but de cet exercice est de refactoriser une application React existante pour utiliser Semantic UI React afin de styliser les composants d'interface utilisateur.
+
+**Instructions :**
+
+1. Utilisez le code d'application React fourni ci-haut. Il contient un formulaire simple avec des champs pour le nom d'utilisateur et le mot de passe.
+
+2. Installez Semantic UI React et ses dépendances dans le projet.
+
+3. Refactorisez l'application pour remplacer les balises HTML par les composants Semantic UI React correspondants. Utilisez les composants `Form`, `Form.Field` et `Button` pour encadrer les champs de saisie et le bouton de soumission.
+
+4. Assurez-vous que les fonctionnalités existantes du formulaire (gestion de l'état, gestion des événements de changement et de soumission) restent inchangées après le refactoring.
+
+5. Testez l'application pour vous assurer que les styles Semantic UI sont appliqués correctement et que le formulaire fonctionne comme prévu.
+
+**Bonus :** 
+
+- Ajoutez des messages d'erreur et de succès à l'interface utilisateur pour indiquer à l'utilisateur si la soumission du formulaire a réussi ou échoué.
+
+- Explorez d'autres composants Semantic UI React et essayez de les intégrer à l'application pour améliorer davantage l'interface utilisateur.
+
+**Livrables :** Une fois l'exercice terminé, soumettez le code refactorisé ainsi que toute documentation ou explication nécessaire pour expliquer les changements apportés à l'application.
+
+
+# 3 -  Correction de l'exercice formatif
+
+
+- Voici la correction étape par étape :
+
+**Étape 1 : Installation de Semantic UI React**
+
+Utilisez npm pour installer Semantic UI React et ses dépendances dans le projet :
+
+```bash
+npm install semantic-ui-react semantic-ui-css
+```
+
+**Étape 2 : Refactorisation de l'application avec Semantic UI React**
+
+Dans le fichier `App.js`, remplacez le code existant par le code suivant pour utiliser les composants Semantic UI React :
+
+```javascript
+import React, { useState } from 'react';
+import { Form, Button } from 'semantic-ui-react';
+import 'semantic-ui-css/semantic.min.css';
+
+function App() {
+  const [formData, setFormData] = useState({
+    username: '',
+    password: '',
+  });
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log('Formulaire soumis avec ces données :', formData);
+  };
+
+  return (
+    <div style={{ width: '300px', margin: 'auto', paddingTop: '50px' }}>
+      <Form onSubmit={handleSubmit}>
+        <Form.Field>
+          <label>Nom d'utilisateur:</label>
+          <input
+            type="text"
+            name="username"
+            value={formData.username}
+            onChange={handleChange}
+          />
+        </Form.Field>
+        <Form.Field>
+          <label>Mot de passe:</label>
+          <input
+            type="password"
+            name="password"
+            value={formData.password}
+            onChange={handleChange}
+          />
+        </Form.Field>
+        <Button type="submit" primary>Soumettre</Button>
+      </Form>
+    </div>
+  );
+}
+
+export default App;
+```
+
+**Étape 3 : Test de l'application**
+
+Exécutez l'application et assurez-vous que les styles Semantic UI sont appliqués correctement et que le formulaire est aligné comme prévu.
+
+Avec ces étapes, le formulaire devrait maintenant être bien aligné et stylisé avec Semantic UI React.
+
+# 4 -  Correction de la partie bonus
+
+- Voici comment vous pourriez implémenter la partie bonus :
+
+### Ajout de messages d'erreur et de succès :
+
+1. **Définir des états pour les messages :**
+   Vous pouvez utiliser deux nouveaux états pour gérer les messages d'erreur et de succès. Par exemple :
+   ```javascript
+   const [error, setError] = useState('');
+   const [success, setSuccess] = useState('');
+   ```
+
+2. **Afficher les messages dans le JSX :**
+   Dans votre JSX, vous pouvez ajouter des éléments pour afficher les messages d'erreur et de succès. Par exemple :
+   ```jsx
+   {error && <div className="ui negative message">{error}</div>}
+   {success && <div className="ui positive message">{success}</div>}
+   ```
+
+3. **Mise à jour des messages lors de la soumission du formulaire :**
+   Dans votre fonction `handleSubmit`, vous pouvez mettre à jour les états des messages en fonction du résultat de la soumission du formulaire. Par exemple :
+   ```javascript
+   const handleSubmit = (event) => {
+     event.preventDefault();
+     // Votre logique de validation et de soumission du formulaire ici
+     if (/* La soumission du formulaire réussit */) {
+       setSuccess('Le formulaire a été soumis avec succès !');
+       setError('');
+     } else {
+       setError('Une erreur est survenue lors de la soumission du formulaire.');
+       setSuccess('');
+     }
+   };
+   ```
+
+# 5 -  (facultatif) Aller plus loin et exploration des autres composants Semantic UI React :
+
+Semantic UI React propose une grande variété de composants pour créer des interfaces utilisateur riches et réactives. Vous pouvez explorer la documentation de Semantic UI React et expérimenter avec différents composants pour améliorer votre application. Voici quelques composants que vous pourriez intégrer :
+- **Dropdown**: Pour les sélections déroulantes.
+- **Modal**: Pour les fenêtres modales et les boîtes de dialogue.
+- **Accordion**: Pour les sections extensibles et rétractables.
+- **Menu**: Pour les menus de navigation.
+- **Card**: Pour afficher des contenus sous forme de cartes.
+
+N'hésitez pas à utiliser ces composants pour améliorer l'expérience utilisateur de votre application.
