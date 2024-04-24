@@ -172,11 +172,13 @@ import React from 'react';
 function ContactPage() {
   return (
     <div>
-      <h1>Page d'Accueil</h1>
-      <p>Bienvenue sur notre site web!</p>
+      <h1>Page de CONTACT</h1>
+      <p>Contactez-nous !</p>
     </div>
   );
 }
+
+export default ContactPage;
 
 export default ContactPage;
 ```
