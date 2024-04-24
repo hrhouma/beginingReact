@@ -10,7 +10,7 @@ Pour créer un formulaire dans React, utilisez la balise `<form>` et incluez les
 ```jsx
 import React, { useState } from 'react';
 
-function MyForm() {
+function App() {
   const [formData, setFormData] = useState({
     username: '',
     password: '',
@@ -53,7 +53,7 @@ function MyForm() {
   );
 }
 
-export default MyForm;
+export default App;
 ```
 
 - Dans cet exemple, nous utilisons le hook `useState` pour gérer l'état du formulaire.
