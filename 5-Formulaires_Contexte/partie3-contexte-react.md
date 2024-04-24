@@ -326,3 +326,27 @@ Dans votre application React :
 2. Vous **fournissez un contexte** (`<Context.Provider value={...}>`) en écrivant votre message sur le tableau.
 3. N'importe quel composant dans l'application peut **consommer le contexte** (`useContext(MyContext)`) comme si un membre de la famille lisait le message sur le tableau pour obtenir l'information.
 
+
+# Question optionelle de recherche pour aller plus loin : contexte React vs `sessionStorage` vs Redux ?
+
+
+Voici un tableau comparatif entre le contexte React, `sessionStorage` et Redux :
+
+| Caractéristique       | Contexte React                      | sessionStorage                      | Redux                                         |
+|-----------------------|-------------------------------------|-------------------------------------|-----------------------------------------------|
+| Type                  | Mécanisme de React                  | API de stockage Web                 | Bibliothèque de gestion d'état                |
+| Portée                | Composants dans l'arbre de React    | Onglet du navigateur                | Application entière                           |
+| Persistance           | Non-persistant (seulement en mémoire) | Persiste pour la durée de la session de l'onglet | Non-persistant (peut être persisté avec middleware) |
+| Utilisation           | Données qui changent rarement       | Stockage de données entre les pages | Gestion d'état complexe et centralisée        |
+| Capacité de stockage  | Limitée par la mémoire de l'application | Environ 5 MB par domaine              | Limitée par la mémoire de l'application       |
+| Structure des données | Peut utiliser n'importe quel type JavaScript | Seulement des chaînes de caractères (nécessite JSON.stringify/parse pour les objets) | Peut utiliser n'importe quel type JavaScript  |
+| Réactivité            | Mise à jour immédiate dans l'UI     | Non-réactif par défaut               | Mise à jour immédiate et prévisible dans l'UI |
+| Flux de données       | Descendant (top-down)               | Non applicable                       | Unidirectionnel                               |
+| Outils de développement | Aucun spécifique à Context          | Aucun spécifique                     | Redux DevTools, middleware                    |
+| Complexité            | Faible à moyenne                    | Faible                              | Moyenne à élevée                              |
+| Configuration         | Minimale                            | Aucune                              | Requiert une configuration et un setup initial|
+| Performance           | Bonne pour des utilisations simples | Impact négligeable                   | Optimisée pour des changements d'état fréquents|
+| Utilisation typique   | Thèmes, authentification, préférences | Données de session, état de formulaire | États applicatifs globaux, logique d'affaires complexe |
+
+- Ce tableau fournit un aperçu général des différences et des cas d'usage pour lesquels chaque solution pourrait être la mieux adaptée. 
+- Le choix dépendra des besoins spécifiques de l'application et des préférences de l'équipe de développement.
