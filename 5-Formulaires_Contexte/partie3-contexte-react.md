@@ -261,6 +261,35 @@ export default App;
 
 ```
 
+## index.css
+```css
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.light-theme {
+  background-color: #fff;
+  color: #000;
+}
+
+.dark-theme {
+  background-color: #333;
+  color: #fff;
+}
+
+```
+
+
 # 3 - Pourquoi utiliser un contexte ? Pensez-y !! 
 
 Le contexte dans React (souvent référé par le terme anglais "Context") est une fonctionnalité qui permet de partager des valeurs (comme les données d'authentification, les préférences de thème, les données utilisateur, etc.) entre tous les composants de votre application sans avoir à passer explicitement les props à chaque niveau de l'arbre de composants.
