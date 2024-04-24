@@ -239,7 +239,7 @@ Avec ces étapes, le formulaire devrait maintenant être bien aligné et stylis�
    const handleSubmit = (event) => {
      event.preventDefault();
      // Votre logique de validation et de soumission du formulaire ici
-     if (/* La soumission du formulaire réussit */) {
+     if (Object.keys(formData).length > 0) {
        setSuccess('Le formulaire a été soumis avec succès !');
        setError('');
      } else {
@@ -248,6 +248,78 @@ Avec ces étapes, le formulaire devrait maintenant être bien aligné et stylis�
      }
    };
    ```
+
+
+# Code complet num1 de la partie bonus :
+ ```jsx
+import React, { useState } from 'react';
+import { Form, Button } from 'semantic-ui-react';
+import 'semantic-ui-css/semantic.min.css';
+
+function App() {
+  const [formData, setFormData] = useState({
+    username: '',
+    password: '',
+  });
+
+  const [error, setError] = useState('');
+  const [success, setSuccess] = useState('');
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  /*
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log('Formulaire soumis avec ces données :', formData);
+  };
+*/
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // Votre logique de validation et de soumission du formulaire ici
+    if (Object.keys(formData).length > 0) {
+      setSuccess('Le formulaire a été soumis avec succès !');
+      setError('');
+    } else {
+      setError('Une erreur est survenue lors de la soumission du formulaire.');
+      setSuccess('');
+    }
+  };
+
+  return (
+    <div style={{ width: '300px', margin: 'auto', paddingTop: '50px' }}>
+      <Form onSubmit={handleSubmit}>
+        <Form.Field>
+          <label>Nom d'utilisateur:</label>
+          <input
+            type="text"
+            name="username"
+            value={formData.username}
+            onChange={handleChange}
+          />
+        </Form.Field>
+        <Form.Field>
+          <label>Mot de passe:</label>
+          <input
+            type="password"
+            name="password"
+            value={formData.password}
+            onChange={handleChange}
+          />
+        </Form.Field>
+        <Button type="submit" primary>Soumettre</Button>
+      </Form>
+      {error && <div className="ui negative message">{error}</div>}
+      {success && <div className="ui positive message">{success}</div>}
+    </div>
+  );
+}
+
+export default App;
+ ```
 
 # 5 -  (facultatif) Aller plus loin et exploration des autres composants Semantic UI React :
 
@@ -259,3 +331,6 @@ Semantic UI React propose une grande variété de composants pour créer des int
 - **Card**: Pour afficher des contenus sous forme de cartes.
 
 N'hésitez pas à utiliser ces composants pour améliorer l'expérience utilisateur de votre application.
+
+
+
