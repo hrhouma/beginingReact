@@ -71,3 +71,120 @@ Pour démarrer l'application, suivez ces étapes :
 
 Cet exemple démontre l'utilisation des contextes pour fournir un état global à différents composants d'une application React. Chaque contexte est responsable de sa propre logique d'état, ce qui facilite la gestion de l'état global et rend les composants plus réutilisables et maintenables.
 
+# CODE COMPLET
+
+## ProductList.js
+```jsx
+import React from 'react';
+import { useSearch } from '../context/SearchContext';
+
+const products = [
+  { id: 1, name: 'Laptop', category: 'Electronics' },
+  { id: 2, name: 'Book', category: 'Books' },
+  { id: 3, name: 'Coffee Maker', category: 'Appliances' }
+];
+
+const ProductList = () => {
+  const { searchTerm } = useSearch();
+  
+  const filteredProducts = products.filter(product =>
+    product.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  return (
+    <ul>
+      {filteredProducts.map(product => (
+        <li key={product.id}>{product.name}</li>
+      ))}
+    </ul>
+  );
+};
+
+export default ProductList;
+```
+
+## SearchBar.js
+```jsx
+```
+## ThemeToggle.js
+```jsx
+```
+
+## SearchContext.js
+```jsx
+```
+
+## ThemeContext.js
+```jsx
+```
+## App.css
+```css
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+```
+
+## App.js
+```jsx
+import React from 'react';
+import { ThemeProvider } from './context/ThemeContext';
+import { SearchProvider } from './context/SearchContext';
+import SearchBar from './components/SearchBar';
+import ProductList from './components/ProductList';
+import ThemeToggle from './components/ThemeToggle';
+
+
+const App = () => {
+  return (
+    <ThemeProvider>
+      <SearchProvider>
+        <ThemeToggle />
+        <SearchBar />
+        <ProductList />
+      </SearchProvider>
+    </ThemeProvider>
+  );
+};
+
+export default App;
+
+```
+
+
+
