@@ -252,8 +252,8 @@ Dans votre configuration de routes :
 </Routes>
 ```
 
-- **`<Route path="/" element={<Layout />}>`** :
-  - Cette route définit que pour l'URL de base (`/`), le composant `Layout` doit être rendu. `Layout` agit comme un cadre pour les pages spécifiques qui seront chargées à l'intérieur de ce cadre.
+- **`<Route path="/" element={<Layout />}>`** : Entrée pour les autres routes
+  - Cette route définit que pour l'URL de base (`/`), le composant `Layout` doit être rendu. `Layout` agit comme un cadre pour les pages spécifiques (entrée pour les autres routes) qui seront chargées à l'intérieur de ce cadre.
   - `<Layout />` inclut le composant `<Outlet>`, qui est l'emplacement où le contenu des sous-routes sera rendu.
 
 - **Les sous-routes de `/`** :
