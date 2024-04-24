@@ -105,17 +105,92 @@ export default ProductList;
 
 ## SearchBar.js
 ```jsx
+import React from 'react';
+import { useSearch } from '../context/SearchContext';
+
+const SearchBar = () => {
+  const { searchTerm, setSearchTerm } = useSearch();
+
+  return (
+    <input
+      type="text"
+      value={searchTerm}
+      onChange={(e) => setSearchTerm(e.target.value)}
+      placeholder="Search products..."
+    />
+  );
+};
+
+export default SearchBar;
+
 ```
 ## ThemeToggle.js
 ```jsx
+import React from 'react';
+import { useTheme } from '../context/ThemeContext';
+
+const ThemeToggle = () => {
+  const { theme, toggleTheme } = useTheme();
+
+  return (
+    <button onClick={toggleTheme}>
+      Switch to {theme === 'light' ? 'dark' : 'light'} theme
+    </button>
+  );
+};
+
+export default ThemeToggle;
+
 ```
 
 ## SearchContext.js
 ```jsx
+import React, { createContext, useState, useContext } from 'react';
+
+const SearchContext = createContext();
+
+export const useSearch = () => useContext(SearchContext);
+
+export const SearchProvider = ({ children }) => {
+  const [searchTerm, setSearchTerm] = useState('');
+
+  return (
+    <SearchContext.Provider value={{ searchTerm, setSearchTerm }}>
+      {children}
+    </SearchContext.Provider>
+  );
+};
+
 ```
 
 ## ThemeContext.js
 ```jsx
+import React, { createContext, useState, useContext, useEffect } from 'react';
+
+const ThemeContext = createContext();
+
+export const useTheme = () => useContext(ThemeContext);
+
+export const ThemeProvider = ({ children }) => {
+  const [theme, setTheme] = useState('light');
+
+  // Toggle the theme and update the body class
+  const toggleTheme = () => {
+    setTheme((currentTheme) => (currentTheme === 'light' ? 'dark' : 'light'));
+  };
+
+  // Update the body class on theme change
+  useEffect(() => {
+    document.body.className = theme + '-theme';
+  }, [theme]);
+
+  return (
+    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+      {children}
+    </ThemeContext.Provider>
+  );
+};
+
 ```
 ## App.css
 ```css
