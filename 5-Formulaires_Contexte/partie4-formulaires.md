@@ -320,6 +320,9 @@ function App() {
 
 export default App;
  ```
+# Problèmes avec le Code ci-haut (code complet num1) de la partie bonus :
+- Nous remarquons que ce code ne fonctionne pas bien avec un nom d'utilisateur et un mot de passe vides.
+
 
 # 5 -  (facultatif) Aller plus loin et exploration des autres composants Semantic UI React :
 
@@ -331,7 +334,6 @@ Semantic UI React propose une grande variété de composants pour créer des int
 - **Card**: Pour afficher des contenus sous forme de cartes.
 
 N'hésitez pas à utiliser ces composants pour améliorer l'expérience utilisateur de votre application.
-
 
 
 
