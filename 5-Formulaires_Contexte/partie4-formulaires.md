@@ -334,9 +334,6 @@ N'hésitez pas à utiliser ces composants pour améliorer l'expérience utilisat
 
 
 
-D'accord, voici l'ajout du point 6 sous forme d'exercice pour la partie sur la validation des entrées dans les formulaires React, sans y inclure la correction :
-
-Parfait, voici le texte reformulé pour l'exercice avec les ajouts spécifiques demandés et l'utilisation de Semantic UI :
 
 # 6 - Exercice pour renforcer la validation des entrées
 
