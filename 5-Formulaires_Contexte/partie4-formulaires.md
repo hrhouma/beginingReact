@@ -445,4 +445,335 @@ N'hésitez pas à utiliser ces composants pour améliorer l'expérience utilisat
 
 Cet exercice vise à renforcer vos compétences en validation des entrées utilisateur dans les applications React, en vous permettant de manipuler des techniques de validation avancées et de gestion d'erreurs, tout en intégrant les composants de Semantic UI React pour une interface utilisateur homogène.
 
-# 7 - Correction - VALIDATION 
+# 7 - Correction 1 - VALIDATION 
+
+## Pour atteindre l'objectif de validation des entrées utilisateur dans le formulaire React, nous allons suivre les étapes suivantes :
+
+1. Ajouter les nouveaux champs au formulaire : email, téléphone et date.
+2. Implémenter les validations pour chaque champ, en affichant des messages d'erreur pertinents.
+3. Assurer que le formulaire ne peut être soumis que si toutes les validations sont passées.
+
+- Voici le code mis à jour avec les nouvelles fonctionnalités de validation :
+
+```jsx
+import React, { useState } from 'react';
+import { Form, Button, Message } from 'semantic-ui-react';
+import 'semantic-ui-css/semantic.min.css';
+
+function App() {
+  const [formData, setFormData] = useState({
+    username: '',
+    password: '',
+    email: '',
+    phone: '',
+    date: '',
+  });
+
+  const [errors, setErrors] = useState({});
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormData({ ...formData, [name]: value });
+    // Réinitialiser le message d'erreur lorsque l'utilisateur commence à modifier un champ
+    setErrors({ ...errors, [name]: '' });
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const newErrors = {};
+
+    // Validation pour le nom d'utilisateur
+    if (formData.username.trim().length < 5 || formData.username.trim().length > 15) {
+      newErrors.username = 'Le nom d\'utilisateur doit contenir entre 5 et 15 caractères alphanumériques.';
+    }
+
+    // Validation pour le mot de passe
+    const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()_+[\]{};':"\\|,.<>/?]).{8,}$/;
+    if (!passwordRegex.test(formData.password)) {
+      newErrors.password = 'Le mot de passe doit inclure une combinaison de lettres majuscules, de chiffres et de caractères spéciaux, avec une longueur minimale de 8 caractères.';
+    }
+
+    // Validation pour l'email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      newErrors.email = 'Veuillez saisir une adresse email valide.';
+    }
+
+    // Validation pour le téléphone
+    const phoneRegex = /^\d{10}$/;
+    if (!phoneRegex.test(formData.phone)) {
+      newErrors.phone = 'Veuillez saisir un numéro de téléphone valide (10 chiffres).';
+    }
+
+    // Validation pour la date (format JJ/MM/AAAA)
+    const dateRegex = /^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[012])\/\d{4}$/;
+    if (!dateRegex.test(formData.date)) {
+      newErrors.date = 'Veuillez saisir une date valide (format JJ/MM/AAAA).';
+    }
+
+    // Vérifier s'il y a des erreurs
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+    } else {
+      // Soumission du formulaire si aucune erreur n'est trouvée
+      alert('Le formulaire a été soumis avec succès !');
+      setErrors({});
+    }
+  };
+
+  return (
+    <div style={{ width: '300px', margin: 'auto', paddingTop: '50px' }}>
+      <Form onSubmit={handleSubmit}>
+        <Form.Field>
+          <label>Nom d'utilisateur:</label>
+          <input
+            type="text"
+            name="username"
+            value={formData.username}
+            onChange={handleChange}
+          />
+          {errors.username && <Message negative>{errors.username}</Message>}
+        </Form.Field>
+        <Form.Field>
+          <label>Mot de passe:</label>
+          <input
+            type="password"
+            name="password"
+            value={formData.password}
+            onChange={handleChange}
+          />
+          {errors.password && <Message negative>{errors.password}</Message>}
+        </Form.Field>
+        <Form.Field>
+          <label>Email:</label>
+          <input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+          />
+          {errors.email && <Message negative>{errors.email}</Message>}
+        </Form.Field>
+        <Form.Field>
+          <label>Téléphone:</label>
+          <input
+            type="text"
+            name="phone"
+            value={formData.phone}
+            onChange={handleChange}
+          />
+          {errors.phone && <Message negative>{errors.phone}</Message>}
+        </Form.Field>
+        <Form.Field>
+          <label>Date:</label>
+          <input
+            type="text"
+            name="date"
+            value={formData.date}
+            onChange={handleChange}
+          />
+          {errors.date && <Message negative>{errors.date}</Message>}
+        </Form.Field>
+        <Button type="submit" primary>Soumettre</Button>
+      </Form>
+    </div>
+  );
+}
+
+export default App;
+```
+
+- Ce code ajoute les nouveaux champs au formulaire et implémente des validations pour chacun d'eux, ainsi que pour les champs existants.
+- Les messages d'erreur pertinents sont affichés sous chaque champ en cas d'entrée invalide.
+- Le formulaire ne peut être soumis que si toutes les validations sont passées.
+- Si vous voulez avoir un numéro de téléphone canadien de cette forme (xxx) xxx- xxxx alors utilisez ce regex :
+
+```javascript
+const phoneRegex = /^\(\d{3}\) \d{3}-\d{4}$/;
+```
+- Ce regex valide les numéros de téléphone suivant le format demandé : (xxx) xxx-xxxx.
+
+# 10 - Version plus élégante ?  opérateur ternair 🔥 🔥 🔥
+
+
+- Utilisons l'opérateur ternaire pour gérer l'affichage conditionnel des messages d'erreur.
+- L'opérateur ternaire est souvent utilisé pour rendre le code plus concis et facile à lire.
+- Voici une version améliorée du code avec l'utilisation de l'opérateur ternaire :
+
+```jsx
+import React, { useState } from 'react';
+import { Form, Button, Message } from 'semantic-ui-react';
+import 'semantic-ui-css/semantic.min.css';
+
+function App() {
+  const [formData, setFormData] = useState({
+    username: '',
+    password: '',
+    email: '',
+    phone: '',
+    date: '',
+  });
+
+  const [errors, setErrors] = useState({});
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormData({ ...formData, [name]: value });
+    setErrors({ ...errors, [name]: '' });
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const newErrors = {};
+
+    // Validation pour le nom d'utilisateur
+    newErrors.username = (formData.username.trim().length < 5 || formData.username.trim().length > 15) ? 'Le nom d\'utilisateur doit contenir entre 5 et 15 caractères alphanumériques.' : '';
+
+    // Validation pour le mot de passe
+    const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()_+[\]{};':"\\|,.<>/?]).{8,}$/;
+    newErrors.password = (!passwordRegex.test(formData.password)) ? 'Le mot de passe doit inclure une combinaison de lettres majuscules, de chiffres et de caractères spéciaux, avec une longueur minimale de 8 caractères.' : '';
+
+    // Validation pour l'email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    newErrors.email = (!emailRegex.test(formData.email)) ? 'Veuillez saisir une adresse email valide.' : '';
+
+    // Validation pour le téléphone
+    const phoneRegex = /^\d{10}$/;
+    newErrors.phone = (!phoneRegex.test(formData.phone)) ? 'Veuillez saisir un numéro de téléphone valide (10 chiffres).' : '';
+
+    // Validation pour la date (format JJ/MM/AAAA)
+    const dateRegex = /^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[012])\/\d{4}$/;
+    newErrors.date = (!dateRegex.test(formData.date)) ? 'Veuillez saisir une date valide (format JJ/MM/AAAA).' : '';
+
+    // Vérifier s'il y a des erreurs
+    setErrors(newErrors);
+    if (Object.values(newErrors).every(value => value === '')) {
+      alert('Le formulaire a été soumis avec succès !');
+    }
+  };
+
+  return (
+    <div style={{ width: '300px', margin: 'auto', paddingTop: '50px' }}>
+      <Form onSubmit={handleSubmit}>
+        <Form.Field>
+          <label>Nom d'utilisateur:</label>
+          <input
+            type="text"
+            name="username"
+            value={formData.username}
+            onChange={handleChange}
+          />
+          {errors.username && <Message negative>{errors.username}</Message>}
+        </Form.Field>
+        <Form.Field>
+          <label>Mot de passe:</label>
+          <input
+            type="password"
+            name="password"
+            value={formData.password}
+            onChange={handleChange}
+          />
+          {errors.password && <Message negative>{errors.password}</Message>}
+        </Form.Field>
+        <Form.Field>
+          <label>Email:</label>
+          <input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+          />
+          {errors.email && <Message negative>{errors.email}</Message>}
+        </Form.Field>
+        <Form.Field>
+          <label>Téléphone:</label>
+          <input
+            type="text"
+            name="phone"
+            value={formData.phone}
+            onChange={handleChange}
+          />
+          {errors.phone && <Message negative>{errors.phone}</Message>}
+        </Form.Field>
+        <Form.Field>
+          <label>Date:</label>
+          <input
+            type="text"
+            name="date"
+            value={formData.date}
+            onChange={handleChange}
+          />
+          {errors.date && <Message negative>{errors.date}</Message>}
+        </Form.Field>
+        <Button type="submit" primary>Soumettre</Button>
+      </Form>
+    </div>
+  );
+}
+
+export default App;
+```
+
+- Cette version utilise l'opérateur ternaire pour définir les messages d'erreur dans la fonction `handleSubmit`, ce qui rend le code plus compact et facile à lire.
+- Chaque validation est effectuée en une seule ligne, ce qui rend le processus de validation plus clair.
+- Les messages d'erreur sont toujours affichés de la même manière que dans la version précédente.
+
+# Annexe : Rappel sur les Expressions Régulières en JavaScript : Guide Débutant
+
+Les expressions régulières (ou regex) sont des outils puissants utilisés pour rechercher, valider et manipuler des chaînes de caractères selon des motifs spécifiques. Ce guide est conçu pour les débutants en JavaScript et vise à fournir une introduction claire et concise aux expressions régulières.
+
+## Qu'est-ce qu'une expression régulière ?
+
+Une expression régulière est un motif de recherche qui décrit un ensemble de chaînes de caractères selon des règles spécifiques. En JavaScript, les expressions régulières sont créées en utilisant l'objet `RegExp` ou en utilisant une syntaxe littérale en encadrant le motif entre deux barres obliques `/`.
+
+## Syntaxe de base
+
+### Utilisation de l'objet `RegExp` :
+
+```javascript
+const regex = new RegExp('pattern');
+```
+
+### Syntaxe littérale :
+
+```javascript
+const regex = /pattern/;
+```
+
+## Exemples de motifs simples :
+
+- **/hello/** : Recherche la chaîne "hello".
+- **/^[A-Z][a-z]+$/** : Recherche des mots commençant par une majuscule, suivis de lettres minuscules (par exemple, "Hello", "World").
+- **/^[0-9]{5}$/** : Recherche des chaînes de cinq chiffres (par exemple, "12345").
+- **/^\d{3}-\d{3}-\d{4}$/** : Recherche des numéros de téléphone au format "xxx-xxx-xxxx" (par exemple, "123-456-7890").
+
+## Caractères de début et de fin
+
+- **`^`** : Représente le début de la chaîne.
+- **`$`** : Représente la fin de la chaîne.
+
+Ces caractères sont utilisés pour indiquer que le motif doit correspondre au début ou à la fin de la chaîne, respectivement.
+
+## Méthodes de recherche
+
+En JavaScript, les expressions régulières peuvent être utilisées avec les méthodes suivantes pour effectuer des recherches dans des chaînes de caractères :
+
+- **`test()`** : Teste si le motif correspond à une partie de la chaîne.
+- **`exec()`** : Recherche le premier motif correspondant dans une chaîne et renvoie les détails.
+
+Exemple d'utilisation avec `test()` :
+
+```javascript
+const regex = /hello/;
+const text = 'Bonjour, hello World!';
+const isMatch = regex.test(text);
+console.log(isMatch); // Renvoie true
+```
+
+## Ressources supplémentaires
+
+- [MDN Web Docs - Expressions régulières](https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/Expressions_reguli%C3%A8res)
+- [RegExr - Tester les expressions régulières en ligne](https://regexr.com/)
+
+- Ce guide fournit une introduction de base aux expressions régulières en JavaScript.
+- Pour explorer davantage ce sujet et comprendre des motifs plus avancés, nous vous recommandons de consulter les ressources supplémentaires fournies ci-dessus.
