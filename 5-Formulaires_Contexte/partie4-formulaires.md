@@ -810,7 +810,7 @@ Cette expression régulière s'assure que la date est dans le format JJ/MM/AAAA,
 
 # Annexe 3 : plus de détails ? Pas encore claire ? 🔥 
 
-- Décomposons l'expression régulière utilisée pour valider le mot de passe en détail :
+- ## 3.1. Décomposons l'expression régulière utilisée pour valider le mot de passe en détail :
 
 ```javascript
 const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()_+[\]{};':"\\|,.<>/?]).{8,}$/;
@@ -839,3 +839,33 @@ Dans les expressions régulières, le symbole `?` a différentes significations 
 **Contexte de l'Assertion positive lookahead** : Lorsqu'il est utilisé dans une expression régulière comme `(?=...)`, il indique une assertion positive lookahead. Cela signifie que la partie de l'expression à droite de `?=` doit être présente, mais elle ne fait pas partie de la correspondance. C'est une façon de spécifier des conditions que la chaîne de caractères doit respecter sans inclure ces conditions dans la correspondance.
 
 - Dans le contexte de l'expression régulière que nous avons examinée, le `?` est utilisé dans deux assertions positives lookahead `(?=...)` pour définir des conditions que la chaîne de caractères doit respecter, mais ces conditions ne font pas partie de la correspondance globale.
+
+
+
+- # 3.2. Décomposons l'expression régulière utilisée pour valider le format de date (JJ/MM/AAAA) pour les débutants :
+
+```javascript
+const dateRegex = /^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[012])\/\d{4}$/;
+```
+
+1. `^` : C'est un symbole d'ancrage de début de chaîne. Il signifie que la chaîne doit commencer exactement à cet endroit pour être valide.
+
+2. `(0[1-9]|[12][0-9]|3[01])` : Ceci est un groupe de capture qui correspond aux jours du mois. Voici ce qu'il signifie :
+   - `0[1-9]` : Correspond à un jour du mois commençant par un zéro, suivi de chiffres de 1 à 9. Cela couvre les jours de 01 à 09.
+   - `[12][0-9]` : Correspond à un jour du mois commençant par un un ou un deux, suivi de chiffres de 0 à 9. Cela couvre les jours de 10 à 29.
+   - `3[01]` : Correspond à un jour du mois commençant par un trois, suivi d'un zéro ou d'un un. Cela couvre les jours de 30 à 31 pour les mois qui le permettent.
+
+3. `\/` : C'est un symbole d'échappement qui correspond simplement au caractère `/`. Les slashes (`/`) dans l'expression régulière sont utilisées pour séparer les parties de la date.
+
+4. `(0[1-9]|1[012])` : Ceci est un groupe de capture qui correspond aux mois de l'année. Voici ce qu'il signifie :
+   - `0[1-9]` : Correspond à un mois commençant par un zéro, suivi de chiffres de 1 à 9. Cela couvre les mois de 01 à 09.
+   - `1[012]` : Correspond à un mois commençant par un un, suivi d'un chiffre de 0 à 2. Cela couvre les mois de 10 à 12.
+
+5. `\/` : Un autre slash qui sépare la partie du mois de la partie de l'année.
+
+6. `\d{4}` : Cela correspond à exactement quatre chiffres consécutifs, représentant l'année dans le format AAAA.
+
+7. `$` : C'est un symbole d'ancrage de fin de chaîne. Il signifie que la chaîne doit finir exactement à cet endroit pour être valide.
+
+- En résumé, cette expression régulière valide les dates au format JJ/MM/AAAA, où JJ est le jour (entre 01 et 31), MM est le mois (entre 01 et 12), et AAAA est l'année (quatre chiffres).
+- Elle assure que la date est correctement formatée et représente une date valide.
