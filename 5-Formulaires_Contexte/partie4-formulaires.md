@@ -445,7 +445,7 @@ N'hésitez pas à utiliser ces composants pour améliorer l'expérience utilisat
 
 Cet exercice vise à renforcer vos compétences en validation des entrées utilisateur dans les applications React, en vous permettant de manipuler des techniques de validation avancées et de gestion d'erreurs, tout en intégrant les composants de Semantic UI React pour une interface utilisateur homogène.
 
-# 7 - Correction 1 - VALIDATION 
+# 10 - Correction 1 - VALIDATION 
 
 ## Pour atteindre l'objectif de validation des entrées utilisateur dans le formulaire React, nous allons suivre les étapes suivantes :
 
@@ -593,7 +593,7 @@ const phoneRegex = /^\(\d{3}\) \d{3}-\d{4}$/;
 ```
 - Ce regex valide les numéros de téléphone suivant le format demandé : (xxx) xxx-xxxx.
 
-# 10 - Version plus élégante ?  opérateur ternair 🔥 🔥 🔥
+# 11 - Version plus élégante ?  opérateur ternair 🔥 🔥 🔥
 
 
 - Utilisons l'opérateur ternaire pour gérer l'affichage conditionnel des messages d'erreur.
