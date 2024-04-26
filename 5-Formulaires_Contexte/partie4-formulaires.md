@@ -250,7 +250,7 @@ Avec ces étapes, le formulaire devrait maintenant être bien aligné et stylis�
    ```
 
 
-# Code complet num1 de la partie bonus :
+# 5 - Code complet num1 de la partie bonus :
  ```jsx
 import React, { useState } from 'react';
 import { Form, Button } from 'semantic-ui-react';
@@ -320,7 +320,7 @@ function App() {
 
 export default App;
  ```
-# Problèmes avec le CODE ci-haut (code complet num1) de la partie bonus :
+# 6 - Problèmes avec le CODE ci-haut (code complet num1) de la partie bonus :
 - Nous remarquons que ce code ne fonctionne pas bien avec un nom d'utilisateur et un mot de passe vides.
 - C'est quoi le problème avec le code précédent ?
 - Réponse : 
@@ -344,7 +344,7 @@ const handleSubmit = (event) => {
 ```
 
 Cette modification garantit que `setSuccess` est appelé seulement si `username` et `password` sont non vides, et `setError` est appelé dans le cas contraire, demandant à l'utilisateur de remplir tous les champs. Cela devrait résoudre les problèmes que vous avez observés.
-# Code complet (FINAL) num2 de la partie bonus :
+# 7- Code complet (FINAL) num2 de la partie bonus :
 - Voici notre code React modifié avec la correction apportée à la fonction `handleSubmit` pour assurer que le message de succès s'affiche seulement quand les champs `username` et `password` sont remplis :
 
 ```jsx
@@ -413,7 +413,7 @@ export default App;
 
 - Avec ce code, votre application React affichera un message d'erreur si l'un des champs est vide, et un message de succès seulement lorsque les deux champs sont correctement remplis.
 
-# 5 -  (facultatif) Aller plus loin et exploration des autres composants Semantic UI React :
+# 8 -  (facultatif) Aller plus loin et exploration des autres composants Semantic UI React :
 
 Semantic UI React propose une grande variété de composants pour créer des interfaces utilisateur riches et réactives. Vous pouvez explorer la documentation de Semantic UI React et expérimenter avec différents composants pour améliorer votre application. Voici quelques composants que vous pourriez intégrer :
 - **Dropdown**: Pour les sélections déroulantes.
@@ -426,7 +426,7 @@ N'hésitez pas à utiliser ces composants pour améliorer l'expérience utilisat
 
 
 
-# 6 - Exercice pour renforcer la validation des entrées
+# 9 - Exercice pour renforcer la validation des entrées
 
 **Objectif :** Améliorer la sécurité et l'intégrité des données en validant les entrées des utilisateurs dans un formulaire React.
 
