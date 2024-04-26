@@ -320,9 +320,98 @@ function App() {
 
 export default App;
  ```
-# Problèmes avec le Code ci-haut (code complet num1) de la partie bonus :
+# Problèmes avec le CODE ci-haut (code complet num1) de la partie bonus :
 - Nous remarquons que ce code ne fonctionne pas bien avec un nom d'utilisateur et un mot de passe vides.
+- C'est quoi le problème avec le code précédent ?
+- Réponse : 
+- Le problème dans le code actuel ci-haut est que la condition de validation dans la fonction `handleSubmit` n'est pas adaptée pour vérifier si les champs `username` et `password` sont vides. La condition `Object.keys(formData).length > 0` sera toujours vraie car `formData` contient toujours deux clés (`username` et `password`), indépendamment de leurs valeurs.
 
+Pour corriger ce problème et s'assurer que le formulaire ne soit soumis avec succès que lorsque les deux champs sont remplis, vous pouvez modifier la condition pour vérifier que ni `username` ni `password` ne sont vides. Voici une version modifiée de votre fonction `handleSubmit` qui implémente cette logique:
+
+```jsx
+const handleSubmit = (event) => {
+  event.preventDefault();
+
+  // Vérification que les champs username et password ne sont pas vides
+  if (formData.username.trim() && formData.password.trim()) {
+    setSuccess('Le formulaire a été soumis avec succès !');
+    setError('');
+  } else {
+    setError('Veuillez remplir tous les champs.');
+    setSuccess('');
+  }
+};
+```
+
+Cette modification garantit que `setSuccess` est appelé seulement si `username` et `password` sont non vides, et `setError` est appelé dans le cas contraire, demandant à l'utilisateur de remplir tous les champs. Cela devrait résoudre les problèmes que vous avez observés.
+# Code complet (FINAL) num2 de la partie bonus :
+- Voici notre code React modifié avec la correction apportée à la fonction `handleSubmit` pour assurer que le message de succès s'affiche seulement quand les champs `username` et `password` sont remplis :
+
+```jsx
+import React, { useState } from 'react';
+import { Form, Button } from 'semantic-ui-react';
+import 'semantic-ui-css/semantic.min.css';
+
+function App() {
+  const [formData, setFormData] = useState({
+    username: '',
+    password: '',
+  });
+
+  const [error, setError] = useState('');
+  const [success, setSuccess] = useState('');
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    // Vérification que les champs username et password ne sont pas vides
+    if (formData.username.trim() && formData.password.trim()) {
+      setSuccess('Le formulaire a été soumis avec succès !');
+      setError('');
+    } else {
+      setError('Veuillez remplir tous les champs.');
+      setSuccess('');
+    }
+  };
+
+  return (
+    <div style={{ width: '300px', margin: 'auto', paddingTop: '50px' }}>
+      <Form onSubmit={handleSubmit}>
+        <Form.Field>
+          <label>Nom d'utilisateur:</label>
+          <input
+            type="text"
+            name="username"
+            value={formData.username}
+            onChange={handleChange}
+          />
+        </Form.Field>
+        <Form.Field>
+          <label>Mot de passe:</label>
+          <input
+            type="password"
+            name="password"
+            value={formData.password}
+            onChange={handleChange}
+          />
+        </Form.Field>
+        <Button type="submit" primary>Soumettre</Button>
+      </Form>
+      {error && <div className="ui negative message">{error}</div>}
+      {success && <div className="ui positive message">{success}</div>}
+    </div>
+  );
+}
+
+export default App;
+```
+
+- Avec ce code, votre application React affichera un message d'erreur si l'un des champs est vide, et un message de succès seulement lorsque les deux champs sont correctement remplis.
 
 # 5 -  (facultatif) Aller plus loin et exploration des autres composants Semantic UI React :
 
