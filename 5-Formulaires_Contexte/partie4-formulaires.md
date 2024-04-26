@@ -334,3 +334,27 @@ N'hésitez pas à utiliser ces composants pour améliorer l'expérience utilisat
 
 
 
+D'accord, voici l'ajout du point 6 sous forme d'exercice pour la partie sur la validation des entrées dans les formulaires React, sans y inclure la correction :
+
+Parfait, voici le texte reformulé pour l'exercice avec les ajouts spécifiques demandés et l'utilisation de Semantic UI :
+
+# 6 - Exercice pour renforcer la validation des entrées
+
+**Objectif :** Améliorer la sécurité et l'intégrité des données en validant les entrées des utilisateurs dans un formulaire React.
+
+**Instructions :**
+
+1. **Utilisez le code d'application React fourni dans la section précédente.** Ce code contient un formulaire simple avec des champs pour le nom d'utilisateur et le mot de passe.
+2. **Ajoutez les champs `email`, `phone`, et `date` au formulaire en utilisant les composants de Semantic UI React.** Assurez-vous de styliser ces champs de manière cohérente avec les autres éléments du formulaire.
+3. **Implémentez des validations pour chaque nouveau champ ajouté ainsi que pour les champs existants :**
+   - **Nom d'utilisateur :** Doit contenir entre 5 et 15 caractères alphanumériques.
+   - **Mot de passe :** Doit inclure une combinaison de lettres majuscules, de chiffres et de caractères spéciaux, avec une longueur minimale de 8 caractères.
+   - **Email :** Doit suivre un format valide d'adresse email.
+   - **Téléphone :** Doit suivre le format d'un numéro de téléphone valide.
+   - **Date :** Doit être une date valide dans le format `JJ/MM/AAAA`.
+4. **Affichez des messages d'erreur pertinents sous chaque champ en cas d'entrée invalide.** Utilisez le retour visuel pour informer l'utilisateur des erreurs détectées.
+5. **Testez le formulaire pour vous assurer que les validations sont appliquées correctement et que les messages d'erreur sont clairs.** Vérifiez également que le formulaire ne peut pas être soumis tant que toutes les validations ne sont pas passées.
+
+Cet exercice vise à renforcer vos compétences en validation des entrées utilisateur dans les applications React, en vous permettant de manipuler des techniques de validation avancées et de gestion d'erreurs, tout en intégrant les composants de Semantic UI React pour une interface utilisateur homogène.
+
+# 7 - Correction - VALIDATION 
