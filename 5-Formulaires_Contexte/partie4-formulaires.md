@@ -718,7 +718,7 @@ export default App;
 - Chaque validation est effectuée en une seule ligne, ce qui rend le processus de validation plus clair.
 - Les messages d'erreur sont toujours affichés de la même manière que dans la version précédente.
 
-# Annexe : Rappel sur les Expressions Régulières en JavaScript : Guide Débutant
+# Annexe 1 : Rappel sur les Expressions Régulières en JavaScript : Guide Débutant
 
 Les expressions régulières (ou regex) sont des outils puissants utilisés pour rechercher, valider et manipuler des chaînes de caractères selon des motifs spécifiques. Ce guide est conçu pour les débutants en JavaScript et vise à fournir une introduction claire et concise aux expressions régulières.
 
@@ -777,3 +777,65 @@ console.log(isMatch); // Renvoie true
 
 - Ce guide fournit une introduction de base aux expressions régulières en JavaScript.
 - Pour explorer davantage ce sujet et comprendre des motifs plus avancés, nous vous recommandons de consulter les ressources supplémentaires fournies ci-dessus.
+
+# Annexe 2 : Rappel sur les Expressions Régulières en JavaScript : Guide Avancé !
+
+## Voici les expressions régulières utilisées dans la section 10 et 11 :
+
+1. Pour la validation du mot de passe :
+```javascript
+const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()_+[\]{};':"\\|,.<>/?]).{8,}$/;
+```
+Cette expression régulière assure que le mot de passe contient au moins une lettre majuscule, une lettre minuscule, un chiffre, un caractère spécial et a une longueur minimale de 8 caractères.
+
+2. Pour la validation de l'email :
+```javascript
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+```
+Cette expression régulière vérifie que l'email est dans un format valide, avec un '@' et un '.'.
+
+3. Pour la validation du numéro de téléphone (10 chiffres) :
+```javascript
+const phoneRegex = /^\d{10}$/;
+```
+Cette expression régulière garantit que le numéro de téléphone est composé de 10 chiffres.
+
+4. Pour la validation de la date (format JJ/MM/AAAA) :
+```javascript
+const dateRegex = /^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[012])\/\d{4}$/;
+```
+Cette expression régulière s'assure que la date est dans le format JJ/MM/AAAA, où JJ est le jour, MM est le mois et AAAA est l'année.
+
+- Ces expressions régulières sont utilisées pour valider les champs du formulaire dans la fonction `handleSubmit()` de l'application React.
+
+# Annexe 3 : plus de détails ? Pas encore claire ? 🔥 
+
+- Décomposons l'expression régulière utilisée pour valider le mot de passe en détail :
+
+```javascript
+const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()_+[\]{};':"\\|,.<>/?]).{8,}$/;
+```
+
+1. `^` : C'est l'ancrage de début de ligne. Cela signifie que la chaîne doit commencer exactement à cet endroit pour être valide.
+
+2. `(?=.*\d)` : Ceci est une assertion positive lookahead. Il vérifie que la chaîne contient au moins un chiffre (\d). L'expression `.*` signifie "n'importe quel caractère (`.`) zéro ou plusieurs fois (`*`)", donc `(?=.*\d)` vérifie si la chaîne contient au moins un chiffre.
+
+3. `(?=.*[a-z])` : C'est une autre assertion positive lookahead. Elle vérifie si la chaîne contient au moins une lettre minuscule.
+
+4. `(?=.*[A-Z])` : C'est encore une assertion positive lookahead. Elle vérifie si la chaîne contient au moins une lettre majuscule.
+
+5. `(?=.*[!@#$%^&*()_+[\]{};':"\\|,.<>/?])` : Ceci est une assertion positive lookahead supplémentaire. Elle vérifie si la chaîne contient au moins un caractère spécial parmi ceux listés.
+
+6. `.{8,}` : Cela correspond à n'importe quel caractère (`.`) répété au moins 8 fois (`{8,}`). Cela garantit que la longueur totale du mot de passe est d'au moins 8 caractères.
+
+7. `$` : C'est l'ancrage de fin de ligne. Cela signifie que la chaîne doit finir exactement à cet endroit pour être valide.
+
+- En résumé, cette expression régulière vérifie que le mot de passe contient au moins une lettre majuscule, une lettre minuscule, un chiffre et un caractère spécial parmi ceux spécifiés, avec une longueur minimale de 8 caractères.
+
+
+### Symbole ?
+Dans les expressions régulières, le symbole `?` a différentes significations selon le contexte dans lequel il est utilisé. 
+
+**Contexte de l'Assertion positive lookahead** : Lorsqu'il est utilisé dans une expression régulière comme `(?=...)`, il indique une assertion positive lookahead. Cela signifie que la partie de l'expression à droite de `?=` doit être présente, mais elle ne fait pas partie de la correspondance. C'est une façon de spécifier des conditions que la chaîne de caractères doit respecter sans inclure ces conditions dans la correspondance.
+
+- Dans le contexte de l'expression régulière que nous avons examinée, le `?` est utilisé dans deux assertions positives lookahead `(?=...)` pour définir des conditions que la chaîne de caractères doit respecter, mais ces conditions ne font pas partie de la correspondance globale.
