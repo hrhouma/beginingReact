@@ -1,4 +1,4 @@
-# Énoncé de Projet pour le Laboratoire React (Date de remise et de présentation : 17 mai 2024)
+# Énoncé de Projet pour le Laboratoire #2 React (Date de remise et de présentation : 17 mai 2024)
 
 # 1 - Description du Projet
 - Ce projet vous engage à partir d'un code de base en React, intégrant Semantic UI et React Router, pour développer une application enrichie de **trois** nouvelles fonctionnalités.
