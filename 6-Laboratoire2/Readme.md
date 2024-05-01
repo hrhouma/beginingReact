@@ -1,27 +1,27 @@
 # Énoncé de Projet pour le Laboratoire React (Date de remise et de présentation : 17 mai 2024)
 
-# Description du Projet
+# 1 - Description du Projet
 - Ce projet vous engage à partir d'un code de base en React, intégrant Semantic UI et React Router, pour développer une application enrichie de **trois** nouvelles fonctionnalités.
 - Vous utiliserez pour cela trois appels API distincts provenant de l'API RestCountries (voir **Annexe #1**).
 - Chaque fonctionnalité sera accessible via un onglet dédié au sein de l'application.
 - Lien de l'API : https://restcountries.com/ 
 
-## Fonctionnalités Requises
+# 2 - Fonctionnalités Requises
 1. **API Diversification**:
 - Chaque onglet de votre application devra exploiter un endpoint différent de l'API RestCountries.
 - Sélectionnez des endpoints qui permettent de créer des fonctionnalités à la fois intéressantes, pratiques et surtout **cohérantes**.
 
-## Exigences Techniques
+# 3 - Exigences Techniques
 1. **Navigation**: Implémentez `React Router v6` pour faciliter la navigation entre les différents onglets de l'application.
 2. **Gestion Globale**: Employez `useContext` pour gérer les données globales de l'application, telles que la langue et/ou les préférences utilisateur.
 3. **Formulaires Interactifs**: Conçoivez des formulaires permettant aux utilisateurs de filtrer ou rechercher des informations spécifiques, en veillant à leur accessibilité et à leur validation correcte.
 4. **Librairie CSS**: Intégrez une librairie CSS comme Semantic UI, Bulma, Material UI ou Bootstrap pour styliser efficacement votre interface utilisateur (Je vous donne le choix de choisir votre librairie CSS).
 
-## Dates Importantes
+## 4 - Dates Importantes
 - **Date Limite de Soumission**: 17 mai 2024.
 - **Présentation**: Les présentations se tiendront le 17 mai 2024, incluant une démo de l'application et une session de questions-réponses pour discuter de vos choix techniques et de votre approche.
 
-## Livrables
+## 5 - Livrables
 - **Code Source**: Fournissez le code source complet de l'application, y compris tous les fichiers de configuration et dépendances.
 - **Documentation**: Rédigez un document détaillant le fonctionnement de l'application, les choix techniques faits, et un guide utilisateur pour naviguer dans l'application.
 - **Démonstration**: Présentez une démonstration en classe de votre application, expliquant les fonctionnalités implémentées et les interactions possibles.
@@ -30,7 +30,7 @@
 - La gestion du temps et la capacité à communiquer efficacement vos idées seront des critères essentiels d'évaluation.
 
 
-# Grille d'évaluation: 
+# 6 - Grille d'évaluation: 
 
 - Voici la grille d'évaluation détaillée pour le laboratoire #2 (Assurez-vous d'expliquer comment vous avez intégré ces fonctionnalités dans votre rapport) :
 
@@ -53,16 +53,17 @@
 | **Gestion des Événements**                  | Configuration et gestion correcte des événements dans les composants React pour une interaction utilisateur réactive.                                                 | 5%     |
 
 
-## Remarque Importante sur l'Évaluation du Projet
+# 7 - Remarque Importante sur l'Évaluation du Projet
 
 - Même si vous travaillez en groupe sur ce projet, il est important de noter que chaque membre du groupe pourrait recevoir une note différente en fonction de sa contribution individuelle au projet et de ses réponses lors de la session de questions-réponses.
 - Par exemple, il est possible que certains membres du groupe obtiennent un score parfait de 100%, tandis que d'autres pourraient se voir attribuer un score de 0% si l'enseignant juge qu'un étudiant n'a pas significativement contribué ou n'a pas activement participé aux phases critiques du projet.
 - Assurez-vous donc de collaborer efficacement et de participer activement pour optimiser votre apprentissage et votre évaluation.
 
 
-# Annexe 1 
+# 8 - Annexe 1 
 
-Voici une énumération simplifiée des endpoints disponibles pour l'API RestCountries que vous pourriez utiliser pour développer les fonctionnalités de votre application React :
+- Lien de votre API REST COUNTRIES: https://restcountries.com/
+- Voici une énumération simplifiée des endpoints disponibles pour l'API RestCountries que vous pourriez utiliser pour développer les fonctionnalités de votre application React :
 
 1. **Latest added Endpoint** - Montre les dernières mises à jour des données des pays.
 2. **Independent** - Liste tous les pays indépendants.
