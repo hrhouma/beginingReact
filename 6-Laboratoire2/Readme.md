@@ -4,6 +4,7 @@
 - Ce projet vous engage à partir d'un code de base en React, intégrant Semantic UI et React Router, pour développer une application enrichie de **trois** nouvelles fonctionnalités.
 - Vous utiliserez pour cela trois appels API distincts provenant de l'API RestCountries (voir **Annexe #1**).
 - Chaque fonctionnalité sera accessible via un onglet dédié au sein de l'application.
+- Lien de l'API : https://restcountries.com/ 
 
 ## Fonctionnalités Requises
 1. **API Diversification**:
