@@ -5,8 +5,8 @@
 1. **Cloner le Répertoire du Projet :**
    Commencez par cloner le répertoire :
    ```bash
-   git clone <URL_du_dépôt>
-   cd <nom_du_dossier>
+   git clone https://github.com/hrhouma/api-quotes-v1.git
+   cd api-quotes-v1/
    ```
 
 2. **Installer les Dépendances :**
