@@ -252,5 +252,32 @@ function App() {
 export default App;
  ```
 
-# C - Tous le code
+# C - Tous le processus
 
+```bash
+git clone https://github.com/hrhouma/api-quotes-v1.git
+cd api-quotes-v1/
+npm install
+- vérifiez http://localhost:5000/quotes
+- vérifiez http://localhost:5000/quotes/3
+- vérifiez http://localhost:5000/random
+```
+
+```bash
+git clone  https://github.com/hrhouma/api-quotes-v1-react.git
+cd api-quotes-v1-react/
+npm install
+vérifiez http://localhost:3000/
+```
+
+## sinon vous désirez tester le code avec semantic-ui !!
+```bash
+git clone  https://github.com/hrhouma/api-quotes-v1-react-semantic.git
+cd api-quotes-v1-react/
+npm install
+vérifiez http://localhost:3000/ (quittez l'autre application ci-haut sans semantic-ui)
+```
+
+# D - Tous le code
+
+- 
