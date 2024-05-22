@@ -252,4 +252,5 @@ function App() {
 export default App;
  ```
 
-# C - Tous lde code
+# C - Tous le code
+
