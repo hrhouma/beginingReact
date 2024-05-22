@@ -20,7 +20,11 @@
    ```bash
    node app.js
    ```
-   Assurez-vous que le terminal reste ouvert pour garder le serveur actif.
+
+- Assurez-vous que le terminal reste ouvert pour garder le serveur actif. 
+- vérifiez http://localhost:5000/quotes
+- vérifiez http://localhost:5000/quotes/3
+- vérifiez http://localhost:5000/random
 
 ## 2 - Développement de l'Application React
 
@@ -287,4 +291,44 @@ Vous trouverez dans le dossier correction les codes suivantes serveurs et client
 2. `1-frontendreact.zip` (client v1) ou git clone https://github.com/hrhouma/api-quotes-v1-react.git , npm install ensuite npm start
 3. `2-frontendreactsemantic.zip` (client v2) ou git clone https://github.com/hrhouma/api-quotes-v1-react-semantic.git
 
-- 
+# E - Résumé : 
+
+
+**Installation et Configuration du Serveur**
+
+Pour configurer le serveur nécessaire à cette partie de l'examen, veuillez suivre les étapes ci-dessous :
+
+1. **Clonage du Répertoire Git**
+   - Exécutez la commande suivante pour cloner le dépôt contenant le serveur d'API :
+     ```
+     git clone https://github.com/hrhouma/api-quotes-v1.git
+     cd api-quotes-v1/
+     ```
+
+2. **Installation des Dépendances**
+   - Placez-vous dans le dossier du backend Express et installez les dépendances requises avec la commande :
+     ```
+     npm install
+     ```
+
+3. **Lancement du Serveur Express**
+   - Démarrez le serveur Express afin qu'il écoute sur le port 5000 en exécutant :
+     ```
+     node app.js
+     ```
+   - Gardez le terminal ouvert pour maintenir le serveur en activité.
+
+4. **Vérification du Serveur**
+   - Assurez-vous que le serveur fonctionne correctement en accédant aux URLs suivantes via votre navigateur ou un client HTTP comme Postman :
+     - http://localhost:5000/quotes
+     - http://localhost:5000/quotes/3
+     - http://localhost:5000/random
+
+**Tâche à Réaliser**
+
+Votre mission principale consiste à développer l'application React qui interagira avec ce serveur. Vous trouverez les spécifications détaillées dans le document joint : [Développement de l'Application React](https://github.com/hrhouma/beginingReact/blob/main/7-ExamenFinal/1-Eval_formative.md).
+
+**Note Importante**
+
+La correction et les attendus pour cette partie de l'examen sont inclus dans le même fichier. Assurez-vous de bien comprendre toutes les instructions pour maximiser votre performance.
+
