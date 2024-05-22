@@ -254,6 +254,7 @@ export default App;
 
 # C - Tous le processus
 
+# Partie serveur 
 ```bash
 git clone https://github.com/hrhouma/api-quotes-v1.git
 cd api-quotes-v1/
@@ -262,7 +263,7 @@ npm install
 - vérifiez http://localhost:5000/quotes/3
 - vérifiez http://localhost:5000/random
 ```
-
+# Partie client 
 ```bash
 git clone  https://github.com/hrhouma/api-quotes-v1-react.git
 cd api-quotes-v1-react/
