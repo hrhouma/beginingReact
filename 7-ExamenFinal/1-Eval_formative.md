@@ -328,6 +328,8 @@ Pour configurer le serveur nécessaire à cette partie de l'examen, veuillez sui
 
 Votre mission principale consiste à développer l'application React qui interagira avec ce serveur. Vous trouverez les spécifications détaillées dans le document joint : [Développement de l'Application React](https://github.com/hrhouma/beginingReact/blob/main/7-ExamenFinal/1-Eval_formative.md).
 
+- Votre tâche c'est la suivante ==> 2 - Développement de l'Application React
+
 **Note Importante**
 
 La correction et les attendus pour cette partie de l'examen sont inclus dans le même fichier. Assurez-vous de bien comprendre toutes les instructions pour maximiser votre performance.
