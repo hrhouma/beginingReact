@@ -30,6 +30,7 @@
    - `http://localhost:5000/news/random`
    - `http://localhost:5000/news/by-id/1`
    - `http://localhost:5000/news/by-date/2018-05-26`
+   - - `http://localhost:5000/news/by-category/ENTERTAINEMENT`
 
 ## 2 - Développement de l'Application React
 
