@@ -15,7 +15,7 @@
    npm install
    ```
     ```bash
-      npm install cors
+    npm install cors
     ```
 
 3. **Lancer le Serveur Express :**
@@ -95,5 +95,5 @@
    - La fonction de recherche de texte (20%).
    - La pagination des articles (20%).
 
-2. **Qualité du Code (10%) :**
+2. **Qualité du Code (20%) :**
    Évaluez la clarté, l'organisation et la modularité du code. Les meilleures pratiques de codage, comme des noms de variables descriptifs et des commentaires pertinents, doivent être observées pour ce pourcentage de la note finale.
