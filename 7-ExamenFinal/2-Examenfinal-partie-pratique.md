@@ -14,9 +14,9 @@
    ```bash
    npm install
    ```
- ```bash
-   npm install cors
- ```
+    ```bash
+      npm install cors
+    ```
 
 3. **Lancer le Serveur Express :**
    Démarrez le serveur Express pour qu'il écoute sur le port `5000` :
