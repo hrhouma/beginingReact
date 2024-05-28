@@ -133,3 +133,9 @@
 
 > Réponse :
 
+
+
+- https://medium.com/@sabinjoshi044/how-to-install-wordpress-on-ubuntu-a-step-by-step-guide-bad460da8fa5
+- https://www.liquidweb.com/kb/how-to-install-wordpress-on-linux-almalinux/
+- https://wiki.crowncloud.net/?How_to_install_WordPress_on_Almalinux_9
+
