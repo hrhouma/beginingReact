@@ -7,7 +7,7 @@ Dans ce fichier, il y a trois niveaux :
 2. 🟡 **Intermédiaire**
 3. 🔴 **Avancé**
 
-C'est un cours complet, et je vous fournis une introduction dans la vidéo ci-jointe.
+C'est un cours complet, et je vous fournis une introduction dans la vidéo ci-jointe : https://drive.google.com/drive/folders/187OQyeUmFfGU5zxDFo22Wf-CoGdT6svJ?usp=sharing
 
 ## 🎯 Pour Aller Plus Loin avec DevOps
 
