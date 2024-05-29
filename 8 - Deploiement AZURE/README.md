@@ -62,4 +62,3 @@ Bon apprentissage ! Je répète, c'est du contenu **optionnel**.
 ---
 
 Bon apprentissage ! 🚀
-```
